@@ -1,0 +1,140 @@
+.k-map {
+    position: relative;
+    width: 100%;
+    padding: 180px 0px 130px 0px;
+    z-index: 1;
+    &__block {
+        width: 100%;
+        &-title {
+            padding: 0px 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & p {
+                width: 100%;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 53px;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: #505050;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-blocks {
+            margin: 157px 180px 40px 180px;
+            width: 292px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-add {
+                width: 52px;
+                height: 29px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 29px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+            &-text {
+                width: 75px;
+                height: 18px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-maps {
+            width: 100%;
+            height: 501px;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-adds {
+            padding: 0 180px;
+            margin-top: 121px;
+            width: 62px;
+            height: 18px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+        &-text {
+            margin-top: 49px;
+            padding: 0 180px;
+            height: 72px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 36px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        &-phone {
+            padding: 0 180px;
+            margin-top: 92px;
+            height: 36px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 36px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        &-email {
+            padding: 0 180px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 207px;
+            &-add {
+                width: 360px;
+                height: 18px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+                display: flex;
+                justify-content: flex-start;
+            }
+            &-text {
+                margin-top: 52px;
+                width: 360px;
+                height: 36px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 50px;
+                line-height: 36px;
+                text-align: center;
+                letter-spacing: 0.01em;
+                text-decoration-line: underline;
+                color: #000000;
+            }
+        }
+    }
+}

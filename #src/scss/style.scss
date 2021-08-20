@@ -1,0 +1,116 @@
+//! --------------------------------------------------------------------
+//! Миксины -----------------------------------------------------------
+//! --------------------------------------------------------------------
+
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+
+//! --------------------------------------------------------------------
+//! Подключение файлов -------------------------------------------------
+//! --------------------------------------------------------------------
+
+@import "fonts.scss";
+@import "index/style.scss";
+@import "contact/style.scss";
+@import "new/style.scss";
+@import "design/style.scss";
+@import "case/style.scss";
+
+
+//! --------------------------------------------------------------------
+//! Стили --------------------------------------------------------------
+//! --------------------------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+}
+button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 90px;
+}
+.grain-1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-6 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.grain-7 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

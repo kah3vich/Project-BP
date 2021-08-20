@@ -1,0 +1,106 @@
+.stories {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    &__text {
+        padding: 85px 90px 85px 90px;
+        &-title {
+            width: 100%;
+            text-align: center;
+            height: 22px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            color: #171717;
+        }
+        &-number {
+            height: 18px;
+            width: 55px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 62px;
+            &-slash {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+            &-one {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+        }
+        &-block {
+            margin-top: 62px;
+            width: 250px;
+            height: 29px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-name {
+            width: 142px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+        &-blocks {
+            width: 27px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+    }
+    &__list {
+        width: 100%;
+        height: 100%;
+        &-item {
+            border-top: 1px solid #949494;
+            display: flex;
+            align-items: center;
+            height: 126px;
+            &:last-child {
+                border-bottom: 1px solid #949494;
+            }
+        }
+        &-logo {
+            width: 160px;
+            height: 45px;
+            margin-left: 90px;
+        }
+        &-text {
+            margin-left: 150px;
+            width: 100%;
+            height: 46px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 46px;
+            letter-spacing: 0.01em;
+            color: #000000;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+// Line 
+.line {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &__list {
+        width: 121%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: -50px;
+        &-item {
+            width: 449px;
+            height: 86px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 100px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            color: rgb(189, 189, 189);
+            transition: all 0.4s ease 0s;
+            cursor: pointer;
+            z-index: 5;
+            &:hover {
+                color: $red;
+                transition: .4s ease;
+            }
+        }
+    }
+}

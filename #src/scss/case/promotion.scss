@@ -1,0 +1,117 @@
+.c-promotion {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    &__block {
+        height: 275px;
+        width: 401px;
+        &-title {
+            margin-top: 30px;
+            height: 22px;
+            text-align: center;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: #222121;
+        }
+        &-img {
+            & img {
+                width: 400px;
+                height: 223px;
+                object-fit: cover;
+            }
+        }
+    }
+    &__blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 60px 30px;
+    }
+}
+.dws-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 48px 0px;
+   }
+   
+   .dws-form {
+    background-color: rgba(255, 255, 255, 0.2);
+   }
+   .dws-form a {
+    text-decoration: none;
+    transition: .5s;
+    color: #298cad;
+   }
+   .dws-form a:hover {
+    color: #36d2ff;
+   }
+   .dws-form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   }
+   .dws-form input {
+    display: block;
+    width: 100%;
+   }
+   .tab-1 {
+        margin: 0px 0px 96px 375px;
+   }
+   .tab {
+       margin-right: 50px;
+   }
+   .tab-form {
+    background-color: transparent;
+    display: none;
+    color: #fff;
+    padding: 30px 90px;
+   }
+   .tab-form.active,
+   #tab-1:checked ~ #form-1,
+   #tab-2:checked ~ #form-2,
+   #tab-3:checked ~ #form-3,
+   #tab-4:checked ~ #form-4,
+   #tab-5:checked ~ #form-5,
+   #tab-6:checked ~ #form-6 {
+    display: block;
+   }
+   label.tab {
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    height: 21px;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    opacity: 0.5;
+   }
+   label.tab.active,
+   input[name="tabs"]:checked + label {
+    background-color: transparent;
+    height: 21px;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #000000;
+    opacity: 1;
+   }
+   input[name="tabs"] {
+    display: none;
+   }
+   
