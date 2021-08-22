@@ -3,6 +3,15 @@
     z-index: 1;
     position: relative;
     padding: 0 0 163px 0;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 164px;
+        background: #949494;
+        bottom: 0;
+        right: 40%;
+    }
     &__text {
         padding: 0px 90px 85px 90px;
         &-title {

@@ -109,6 +109,73 @@
 
 <section class="c-promotion">
     <canvas class="grain-2"></canvas>
+
+    <div class="c-promotion__media">
+        <div class="c-promotion__media-container">
+            <select id="list">
+                <option value="hide">-- Month --</option>
+                <option value="january" rel="icon-temperature">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select> 
+        </div>
+    </div>
+    <script>
+        // $('select').find('select#list').each(function(){
+        //     var $this = $(this), numberOfOptions = $(this).children('option').length;
+        
+        //     $this.addClass('select-hidden'); 
+        //     $this.wrap('<div class="select"></div>');
+        //     $this.after('<div class="select-styled"></div>');
+
+        //     var $styledSelect = $this.next('div.c-select-styled');
+        //     $styledSelect.text($this.children('option').eq(0).text());
+        
+        //     var $list = $('<ul />', {
+        //         'class': 'select-options'
+        //     }).insertAfter($styledSelect);
+        
+        //     for (var i = 0; i < numberOfOptions; i++) {
+        //         $('<li />', {
+        //             text: $this.children('option').eq(i).text(),
+        //             rel: $this.children('option').eq(i).val()
+        //         }).appendTo($list);
+        //     }
+        
+        //     var $listItems = $list.children('li');
+        
+        //     $styledSelect.click(function(e) {
+        //         e.stopPropagation();
+        //         $('div.c-select-styled.active').not(this).each(function(){
+        //             $(this).removeClass('active').next('ul.select-options').hide();
+        //         });
+        //         $(this).toggleClass('active').next('ul.select-options').toggle();
+        //     });
+        
+        //     $listItems.click(function(e) {
+        //         e.stopPropagation();
+        //         $styledSelect.text($(this).text()).removeClass('active');
+        //         $this.val($(this).attr('rel'));
+        //         $list.hide();
+        //         //console.log($this.val());
+        //     });
+        
+        //     $(document).click(function() {
+        //         $styledSelect.removeClass('active');
+        //         $list.hide();
+        //     });
+
+        // });
+    </script>
     <div class="dws-wrapper">
         <div class="dws-form">
             <!-- Вкладки на CSS -->
@@ -956,28 +1023,28 @@
     </div>
 </section>
 
-<section class="footer">
+<section class="c-footer">
     <canvas class="grain-6"></canvas>
     <div class="container">
-        <div class="footer__container">
-            <div class="footer__block">
-                <ul class="footer__info">
-                    <li class="footer__info-item">
-                        <div class="footer__info-title">Офис</div>
-                        <div class="footer__info-office">
+        <div class="c-footer__container">
+            <div class="c-footer__block">
+                <ul class="c-footer__info">
+                    <li class="c-footer__info-item">
+                        <div class="c-footer__info-title">Офис</div>
+                        <div class="c-footer__info-office">
                             Москва <br>
                             Дельта Измайлово, <br>
                             офис 30
                         </div>
-                        <div class="footer__info-email">your@bpump.ru</div>
+                        <div class="c-footer__info-email">your@bpump.ru</div>
                     </li>
-                    <li class="footer__info-item">
-                        <div class="footer__info-title">Телефон</div>
-                        <div class="footer__info-phone">+7 (499) 344-97-77</div>
+                    <li class="c-footer__info-item">
+                        <div class="c-footer__info-title">Телефон</div>
+                        <div class="c-footer__info-phone">+7 (499) 344-97-77</div>
                     </li>
-                    <li class="footer__info-item">
-                        <div class="footer__info-title">Разделы</div>
-                        <div class="footer__info-sections">
+                    <li class="c-footer__info-item">
+                        <div class="c-footer__info-title">Разделы</div>
+                        <div class="c-footer__info-sections">
                             Web разработка <br>
                             дизайн <br>
                             продвижение <br>
@@ -985,10 +1052,10 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="footer__add">
-                    <li class="footer__add-office">©2011—2021 Business Pump</li>
-                    <li class="footer__add-phone">Политика конфиденциальности</li>
-                    <li class="footer__add-sections">
+                <ul class="c-footer__add">
+                    <li class="c-footer__add-office">©2011—2021 Business Pump</li>
+                    <li class="c-footer__add-phone">Политика конфиденциальности</li>
+                    <li class="c-footer__add-sections">
                         <a href="#">
                             <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.9309 8.62994C12.5327 8.32723 12.9876 7.99008 13.2994 7.62573C13.8541 6.96955 14.1278 6.09948 14.1278 5.02096C14.1278 3.97143 13.8541 3.07417 13.3067 2.32192C12.3931 1.09657 10.8469 0.469395 8.66084 0.436768H0V18.1155H8.07535C8.9853 18.1155 9.82818 18.0376 10.6076 17.8781C11.3871 17.7167 12.0614 17.4213 12.6323 16.9899C13.1399 16.6147 13.5641 16.1488 13.9012 15.5996C14.4341 14.7694 14.7006 13.8286 14.7006 12.7809C14.7006 11.7658 14.4668 10.9012 14.0027 10.1906C13.5332 9.48007 12.8444 8.95984 11.9309 8.62994ZM3.57273 3.50739H7.47355C8.33093 3.50739 9.03787 3.59984 9.59254 3.78292C10.2342 4.04938 10.5551 4.59136 10.5551 5.41793C10.5551 6.1593 10.3103 6.67772 9.82637 6.96955C9.33877 7.26139 8.70615 7.40821 7.93034 7.40821H3.57273V3.50739ZM9.74117 14.7368C9.30976 14.9452 8.70253 15.0485 7.9249 15.0485H3.57273V10.3338H7.98472C8.75328 10.3393 9.35145 10.4408 9.77924 10.6311C10.5406 10.9755 10.9194 11.6063 10.9194 12.5289C10.9194 13.6165 10.5279 14.3488 9.74117 14.7368Z" fill="black"/>

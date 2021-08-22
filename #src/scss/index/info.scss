@@ -11,6 +11,20 @@
         border-bottom: 1px solid $gray-94;
     }
     &__text {
+        &-btn {
+            &-container {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 97px;
+                    height: 47px;
+                    border: 1px solid #dc4139;
+                    top: 15px;
+                    left: -23px;
+                }
+            }
+        }
         &-title {
             width: 375px;
             height: 165px;

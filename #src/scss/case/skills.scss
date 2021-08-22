@@ -1,4 +1,4 @@
-.skills {
+.c-skills {
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -478,25 +478,25 @@ button.skills__info-btn {
     right: 44px;
     top: 33px;
 }
-.swiper-control .swiper-button-next::after {
-    content: url(../../img/right.svg);
-}
+// .swiper-control .swiper-button-next::after {
+//     content: url(../../img/right.svg);
+// }
 .swiper-control .swiper-button-prev {
     position: absolute;
     left: 28px;
     top: 33px;
 }
-.swiper-control .swiper-button-prev::after {
-    content: url(../../img/left.svg);
-}
-.swiper-control .swiper-button-next {
-    background: url('../../img/right.png') no-repeat;
-    width: 35px;
-}
-.swiper-control .swiper-button-prev {
-    background: url('../../img/left.png') no-repeat;
-    width: 35px;
-}
+// .swiper-control .swiper-button-prev::after {
+//     content: url(../../img/left.svg);
+// }
+// .swiper-control .swiper-button-next {
+//     background: url('../../img/right.png') no-repeat;
+//     width: 35px;
+// }
+// .swiper-control .swiper-button-prev {
+//     background: url('../../img/left.png') no-repeat;
+//     width: 35px;
+// }
 .swiper__block {
     display: flex;
     flex-direction: column;

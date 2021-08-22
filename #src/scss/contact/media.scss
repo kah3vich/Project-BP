@@ -7,6 +7,11 @@
     .k-header__container {
         width: 990px;
     }
+    .k-map {
+        &::after {
+            display: none;
+        }
+    }
 }
 @media (max-width: 1300px) {
     .k-header__container {
@@ -165,6 +170,9 @@
     }
     .k-footer__block {
         padding: 65px 50px 30px 50px;
+    }
+    .k-header__menu-item {
+        color: #000;
     }
 }
 @media (max-width: 1000px) {
