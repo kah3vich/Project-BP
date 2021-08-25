@@ -158,11 +158,11 @@
     .c-header__menu-item {
         &::after {
             background: #fff;
-            border: 1px solid #fff;
+            border-top: 1px solid #fff;
         }
         &::before {
             background: #fff;
-            border: 1px solid #fff;
+            border-top: 1px solid #fff;
         }
     }
     .c-list__block-item {

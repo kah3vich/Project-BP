@@ -172,10 +172,10 @@
     }
     .d-header__menu-item {
         &::after {
-            border: 1px solid #fff;
+            border-top: 1px solid #fff;
         }
         &::before {
-            border: 1px solid #fff;
+            border-top: 1px solid #fff;
         }
     }
     .d-header__logo {
