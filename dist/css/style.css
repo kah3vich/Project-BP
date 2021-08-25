@@ -7860,6 +7860,7 @@ button.s-header__info-btn:hover .s-header__info-btn-right.btn-right-after:before
 .swiper-container {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .mySwiper .swiper-slide {
