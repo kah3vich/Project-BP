@@ -1,0 +1,167 @@
+// Case 
+.case {
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    &__text {
+        padding: 93px 90px 0px 90px;
+        &-number {
+            height: 18px;
+            width: 55px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 62px;
+            &-slash {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+            &-one {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+        }
+        &-block {
+            width: 310px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 103px;
+            align-items: center;
+        }
+        &-question {
+            width: 58px;
+            height: 29px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            color: $gray-C9;
+        }
+        &-name {
+            width: 89px;
+            height: 18px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: $gray-C9;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 500px;
+        background-image: url('../img/case-img-1.png');
+        background-size: cover;
+        z-index: 5;
+        &-title {
+            padding: 205px 0px 0px 180px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 45px;
+            letter-spacing: 0.12em;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: $white;
+        }
+    }
+    &__lists {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            &-1 {
+                background-image: url('../img/case-img-2.png');
+                background-size: cover;
+                width: 480px;
+                height: 430px;
+                z-index: 5;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "Freedom";
+                    width: 73px;
+                    height: 22px;
+                    left: 45%;
+                    bottom: 30px;
+                    font-family: Circe;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-decoration-line: underline;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    display: none;
+                }
+            }
+            &-2 {
+                background-image: url('../img/case-img-3.png');
+                background-size: cover;
+                width: 480px;
+                height: 430px;
+                z-index: 5;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "Freedom";
+                    width: 73px;
+                    height: 22px;
+                    left: 45%;
+                    bottom: 30px;
+                    font-family: Circe;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-decoration-line: underline;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+            }
+            &-3 {
+                background-image: url('../img/case-img-4.png');
+                background-size: cover;
+                width: 480px;
+                height: 430px;
+                z-index: 5;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "Freedom";
+                    width: 73px;
+                    height: 22px;
+                    left: 45%;
+                    bottom: 30px;
+                    font-family: Circe;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-decoration-line: underline;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    display: none;
+                }
+            }
+        }
+    }
+}

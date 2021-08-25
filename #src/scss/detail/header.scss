@@ -1,0 +1,285 @@
+// Header 
+.dt-header {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    padding: 39px 0px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    &__logo {
+        z-index: 5;
+    }
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        width: 420px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 60px;
+        &-geo {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 19px;
+            color: #252525;
+            display: flex;
+            align-items: center;
+            & svg {
+                margin: -3px 0px 0px 25px;
+            }
+        }
+        &-item {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 19px;
+            color: #252525;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                right: -42px;
+                width: 25px;
+                height: 0px;
+                border: 1px solid #DC4139;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 12px;
+                right: -58px;
+                width: 25px;
+                height: 0px;
+                border: 1px solid #DC4139;
+            }
+        }
+    }
+    &__container {
+        width: 1095px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &__info {
+        &-add {
+            margin-top: 11px;
+            width: 96px;
+            height: 19px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 19px;
+            color: #7D7D7D;
+        }
+        &-title {
+            margin-top: 48px;
+            width: 1080px;
+            height: 88px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 88px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #292929;
+            z-index: 5;
+        }
+        &-blocks {
+            width: 1080px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 158px;
+        }
+        &-image {
+            width: 372px;
+            height: 234px;
+            position: relative;
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+            &::after {
+                font-weight: bold;
+                text-transform: lowercase;
+                content: "Под ключ";
+                position: absolute;
+                top: -42px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-text {
+            width: 425px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-client {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 32px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #000000;
+            position: relative;
+            &::after {
+                content: "Клиент";
+                text-transform: lowercase;
+                position: absolute;
+                top: -42px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-service {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: #000000;
+            position: relative;
+            &::after {
+                content: "Услуга";
+                text-transform: lowercase;
+                position: absolute;
+                top: -42px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-website {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            text-transform: lowercase;
+            color: #000000;
+            position: relative;
+            &::after {
+                content: "Сайт";
+                font-weight: bold;
+                text-transform: lowercase;
+                position: absolute;
+                top: -42px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-websitemedia {
+            display: none;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            text-transform: lowercase;
+            color: #000000;
+            position: relative;
+            &::after {
+                content: "Сайт";
+                font-weight: bold;
+                text-transform: lowercase;
+                position: absolute;
+                top: -42px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+    }
+    &__search {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0px 90px 64px 90px;
+        &-arrow {
+            width: 26px;
+            height: 26px;
+        }
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            width: 65px;
+        }
+        &-text {
+            width: 35px;
+            height: 19px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 19px;
+            color: $red;
+        }
+        &-circle {
+            width: 26px;
+            height: 26px;
+            margin: -4px 0px 0px 10px;
+        }
+    }
+}
+
+
+

@@ -3,7 +3,26 @@ var wow = new WOW({
     mobile: false, // отключать анимацию на мобильных устройствах ( зависит от размера экрана )
 });
   wow.init(); // инициализация анимации 
-$('select').each(function(){
+$(document).ready(function(){ // стандартный код для начало работы jquery 
+    // если страница загрузилась ( стили ), то код начинает свою работу 
+    
+        //! Работа с атрибутами
+    
+    
+        $('#box').on('change', function(){
+            $('#s-showing__list-text-1').text(this.checked ? '338,381' : '104,457');
+            $('#s-showing__list-text-2').text(this.checked ? '64,810' : '26,740');
+            $('#s-showing__list-text-3').text(this.checked ? '340' : '122');
+        });
+    
+    });
+    
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 6,
+        spaceBetween: 30,
+    });
+$('select#sorts').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
   
     $this.addClass('select-hidden'); 
@@ -48,7 +67,51 @@ $('select').each(function(){
     });
 
 });
+$('select#promotion').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
 
+    $this.addClass('c-select-hidden'); 
+    $this.wrap('<div class="c-select"></div>');
+    $this.after('<div class="c-select-styled"></div>');
+
+    var $styledSelect = $this.next('div.c-select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+
+    var $list = $('<ul />', {
+        'class': 'c-select-options'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.c-active').not(this).each(function(){
+            $(this).removeClass('c-active').next('ul.c-select-options').hide();
+        });
+        $(this).toggleClass('c-active').next('ul.c-select-options').toggle();
+    });
+
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('c-active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+
+    $(document).click(function() {
+        $styledSelect.removeClass('c-active');
+        $list.hide();
+    });
+
+});
 // Аккордеон для блока skills
 
 document.querySelectorAll('.skills__accordion-item__trigger').forEach((item) => 

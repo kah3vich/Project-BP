@@ -1,0 +1,111 @@
+.team {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 0 0 170px 0;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 170px;
+        background: #949494;
+        bottom: 0;
+        right: 40%;
+    }
+    &__text {
+        padding: 85px 90px 85px 90px;
+        &-title {
+            width: 100%;
+            text-align: center;
+            height: 22px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+            text-decoration-line: underline;
+            color: #171717;
+        }
+        &-number {
+            margin-top: 119px;
+            height: 18px;
+            width: 55px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 62px;
+            &-slash {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+            &-one {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $gray-C9;
+            }
+        }
+        &-block {
+            margin-top: 62px;
+            width: 250px;
+            height: 29px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-name {
+            width: 142px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+        &-blocks {
+            width: 65px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+        &-add {
+            margin-top: 109px;
+            width: 723px;
+            height: 165px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 55px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #505050;
+        }
+    }
+    &__block {
+        width: 100%;
+        height: 646px;
+        &-img {
+            width: 100%;
+            height: 646px;
+            // background-image: url("../../img/team-bg.png");
+            // background-size: cover;
+            background-color: $black;
+        }
+    }
+}

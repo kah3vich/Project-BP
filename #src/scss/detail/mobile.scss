@@ -1,0 +1,65 @@
+.dt-mobile {
+    position: relative;
+    padding: 245px 0 0 90px;
+    &__block {
+        width: 780px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        &-title {
+            width: 195px;
+            height: 55px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-2  /";
+                white-space: pre;
+                position: absolute;
+                top: -53px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #9C9C9C;
+            }
+        }
+        &-text {
+            width: 83px;
+            height: 18px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+        }
+        &-image {
+            width: 220px;
+            height: 408px;
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-images {
+            display: none;
+            width: 220px;
+            height: 408px;
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

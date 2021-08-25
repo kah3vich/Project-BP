@@ -36,7 +36,7 @@
     <canvas class="grain-1"></canvas>
     <div class="container">
         <div class="c-header__nav">
-            <div class="c-header__logo wow fadeIn" data-wow-delay="0.9s">
+            <div class="c-header__logo">
                 <a href="/">
                     <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="41" height="41" fill="#DC4139"/>
@@ -45,25 +45,25 @@
                 </a>
             </div>
             <div class="c-header__menu">
-                <p class="c-header__menu-geo wow fadeInUp" data-wow-delay="0.9s">г. Москва, Дельта Измайлово, офис 30
+                <p class="c-header__menu-geo">г. Москва, Дельта Измайлово, офис 30
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="15.4198" y1="0.271626" x2="5.79479" y2="15.1466" stroke="#DC4139"/>
                         <line y1="-0.5" x2="17.7174" y2="-0.5" transform="matrix(0.543251 0.83957 0.83957 -0.543251 1 0)" stroke="#DC4139"/>
                     </svg>
                 </p>
-                <div class="c-header__menu-item wow fadeInUp" data-wow-delay="1s">Меню</div>
+                <div class="c-header__menu-item">Меню</div>
             </div>
         </div>
         <div class="c-header__container">
             <div class="c-header__news">
-                <div class="c-header__news-add wow fadeInUp" data-wow-delay="0.9s">Digital агентство</div>
-                <div class="c-header__news-title wow fadeIn" data-wow-delay="1.3s">НАШИ КЕЙСЫ</div>
-                <div class="c-header__news-text wow fadeIn" data-wow-delay="1.7s">Посмотрите <br>реализованные проекты Bpump</div>
+                <div class="c-header__news-add">Digital агентство</div>
+                <div class="c-header__news-title">НАШИ КЕЙСЫ</div>
+                <div class="c-header__news-text">Посмотрите <br>реализованные проекты Bpump</div>
             </div>
         </div>
         <div class="c-header__search">
             <a href="#">
-                <div class="c-header__search-arrow wow fadeInUp" data-wow-delay="0.9s">
+                <div class="c-header__search-arrow">
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="25" height="25" rx="12.5" fill="#DC4139" stroke="#DC3F39"/>
                         <g clip-path="url(#clip0)">
@@ -78,7 +78,7 @@
                 </div>
             </a>
             <a href="#">
-                <div class="c-header__search-item wow fadeInUp" data-wow-delay="0.9s">
+                <div class="c-header__search-item">
                     <div class="c-header__search-text">Старт</div>
                     <div class="c-header__search-circle">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,7 @@
 
 
 <section class="c-case">
-    <div class="c-case__image wow fadeIn" data-wow-delay="0.9s">
+    <div class="c-case__image">
         <div class="c-case__image-block">
             <div class="c-case__image-icons">
                 <svg width="127" height="127" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,70 +112,16 @@
 
     <div class="c-promotion__media">
         <div class="c-promotion__media-container">
-            <select id="list">
-                <option value="hide">-- Month --</option>
-                <option value="january" rel="icon-temperature">January</option>
-                <option value="february">February</option>
-                <option value="march">March</option>
-                <option value="april">April</option>
-                <option value="may">May</option>
-                <option value="june">June</option>
-                <option value="july">July</option>
-                <option value="august">August</option>
-                <option value="september">September</option>
-                <option value="october">October</option>
-                <option value="november">November</option>
-                <option value="december">December</option>
+            <select id="promotion">
+                <option value="E-commerce" rel="icon-temperature">E-commerce</option>
+                <option value="Промо">Промо </option>
+                <option value="Брендинг">Брендинг</option>
+                <option value="Корпоративный">Корпоративный</option>
+                <option value="Сервис">Сервис</option>
+                <option value="Архив">Архив</option>
             </select> 
         </div>
     </div>
-    <script>
-        // $('select').find('select#list').each(function(){
-        //     var $this = $(this), numberOfOptions = $(this).children('option').length;
-        
-        //     $this.addClass('select-hidden'); 
-        //     $this.wrap('<div class="select"></div>');
-        //     $this.after('<div class="select-styled"></div>');
-
-        //     var $styledSelect = $this.next('div.c-select-styled');
-        //     $styledSelect.text($this.children('option').eq(0).text());
-        
-        //     var $list = $('<ul />', {
-        //         'class': 'select-options'
-        //     }).insertAfter($styledSelect);
-        
-        //     for (var i = 0; i < numberOfOptions; i++) {
-        //         $('<li />', {
-        //             text: $this.children('option').eq(i).text(),
-        //             rel: $this.children('option').eq(i).val()
-        //         }).appendTo($list);
-        //     }
-        
-        //     var $listItems = $list.children('li');
-        
-        //     $styledSelect.click(function(e) {
-        //         e.stopPropagation();
-        //         $('div.c-select-styled.active').not(this).each(function(){
-        //             $(this).removeClass('active').next('ul.select-options').hide();
-        //         });
-        //         $(this).toggleClass('active').next('ul.select-options').toggle();
-        //     });
-        
-        //     $listItems.click(function(e) {
-        //         e.stopPropagation();
-        //         $styledSelect.text($(this).text()).removeClass('active');
-        //         $this.val($(this).attr('rel'));
-        //         $list.hide();
-        //         //console.log($this.val());
-        //     });
-        
-        //     $(document).click(function() {
-        //         $styledSelect.removeClass('active');
-        //         $list.hide();
-        //     });
-
-        // });
-    </script>
     <div class="dws-wrapper">
         <div class="dws-form">
             <!-- Вкладки на CSS -->
