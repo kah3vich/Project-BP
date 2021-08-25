@@ -9012,6 +9012,10 @@ button.s-about__block-btn:hover .s-about__block-btn-right.btn-right-after:before
   outline: none;
 }
 
+body {
+  background: #f2f3f5;
+}
+
 a {
   text-decoration: none;
 }
