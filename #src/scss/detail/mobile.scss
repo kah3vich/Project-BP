@@ -1,6 +1,10 @@
 .dt-mobile {
     position: relative;
     padding: 245px 0 0 90px;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__block {
         width: 780px;
         height: 100%;

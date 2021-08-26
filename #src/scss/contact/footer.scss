@@ -3,6 +3,9 @@
     z-index: 1;
     position: relative;
     border-top: 1px solid #949494;
+    & .container {
+        max-width: 1440px;
+    }
     &__block {
         padding: 65px 90px 30px 90px;
         width: 100%;

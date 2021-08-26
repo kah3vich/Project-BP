@@ -4,8 +4,14 @@
     z-index: 1;
     height: 1000px;
     background: #0D0D0D;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__text {
         padding: 146px 0px 98px 90px;
+        max-width: 1440px;
+        margin: 0 auto;
         &-title {
             width: 723px;
             height: 220px;
@@ -17,6 +23,7 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #F4F4F4;
+            white-space: pre;
         }
     }
     &__block {
@@ -62,13 +69,14 @@
             color: #535353;
         }
         &-text {
+            width: 54%;
             height: 21px;
             font-family: Circe;
             font-style: normal;
             font-weight: normal;
             font-size: 13px;
             line-height: 21px;
-            text-align: center;
+            text-align: left;
             color: #FFFFFF;
         }
     }

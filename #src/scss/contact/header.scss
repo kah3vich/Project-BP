@@ -5,6 +5,10 @@
     height: 100vh;
     padding: 39px 0px 0px 0px;
     position: relative;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__logo {
         z-index: 5;
     }
@@ -254,14 +258,17 @@
         }
     }
     &__search {
+        max-width: 1440px;
+        margin: 0 auto;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: 97%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         padding: 0 90px 120px 90px;
         &-arrow {
             width: 26px;

@@ -6,6 +6,10 @@
     padding: 39px 0px 0px 0px;
     position: relative;
     overflow: hidden;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__logo {
         z-index: 5;
     }
@@ -178,14 +182,16 @@
         }
     }
     &__search {
+        max-width: 1440px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: 97%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 0px 180px 100px 180px;
         &-arrow {
             width: 26px;
@@ -294,7 +300,7 @@ button.s-header__info-btn {
 		transition: .15s .25s ease left, .5s .05s ease color;
 	}
 	&.btn-right-after:before {
-		content: 'Start проекта';
+		content: '';
 		position: absolute;
 		left: -230px;
 		top: 14px;

@@ -2,8 +2,12 @@
     width: 100%;
     z-index: 1;
     position: relative;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__text {
-        padding: 85px 90px 85px 90px;
+        padding: 85px 0 85px 0;
         &-title {
             width: 100%;
             text-align: center;

@@ -3,6 +3,10 @@
     z-index: 1;
     position: relative;
     padding: 0 0 163px 0;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -73,7 +77,7 @@
             color: #9C9C9C;
         }
         &-blocks {
-            width: 65px;
+            width: 100px;
             font-family: Circe;
             font-style: normal;
             font-weight: normal;

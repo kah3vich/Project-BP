@@ -5,6 +5,10 @@
     padding: 39px 0px 92px 0px;
     position: relative;
     overflow: hidden;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__logo {
         z-index: 5;
     }
@@ -154,6 +158,15 @@
         "n-header__new-1 n-header__new-1 n-header__new-5 n-header__new-6"
         "n-header__new-1 n-header__new-1 n-header__new-4 n-header__new-7"
         "n-header__new-2 n-header__new-2 n-header__new-3 n-header__new-3";
+        &-fon {
+            background-color: rgba(0,0,0,.3);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: none;
+        }
         &-1 {
             grid-area: n-header__new-1;
             width: 100%;

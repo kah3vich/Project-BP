@@ -2,6 +2,9 @@
     .k-header__container {
         width: 1040px;
     }
+    .k-team__text {
+        padding: 0 90px 85px 90px;
+    }
 }
 @media (max-width: 1350px) {
     .k-header__container {
@@ -110,6 +113,19 @@
     }
     .k-footer__block {
         padding: 65px 70px 30px 70px;
+    }
+    .c-list__text-title {
+        white-space: normal;
+    }
+    .skills__text-add {
+        white-space: normal;
+    }
+    .skills__block-title {
+        white-space: normal;
+    }
+    .k-map__block-title p {
+        white-space: normal;
+        line-height: 56px;
     }
 }
 @media (max-width: 1050px) {

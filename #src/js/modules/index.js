@@ -281,7 +281,7 @@ class Grain_1 {
 
 class Grain_2 {
     constructor (el_2) {
-        this.patternSize = 300;
+        this.patternSize = 150;
         this.patternScaleX = 1;
         this.patternScaleY = 1;
         this.patternRefreshInterval = 3; 

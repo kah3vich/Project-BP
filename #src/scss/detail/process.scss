@@ -1,8 +1,13 @@
 .dt-process {
     position: relative;
     padding: 191px 0 130px 90px;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__text {
-        width: 560px;
+        white-space: pre;
+        width: 540px;
         height: 100%;
         font-family: Circe;
         font-style: normal;

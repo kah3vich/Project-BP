@@ -7,12 +7,17 @@
     &__container {
         display: flex;
         width: 1440px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 0 0 50px;
     }
     &__content {
         z-index: 10;
     }
     &__text {
-        padding: 100px 180px 105px 180px;
+        max-width: 1440px;
+        margin:  0 auto;
+        padding: 100px 90px 105px 90px;
         &-title {
             width: 100%;
             text-align: center;
@@ -83,6 +88,7 @@
             color: #9C9C9C;
         }
         &-add {
+            white-space: pre;
             margin-top: 109px;
             width: 723px;
             height: 165px;
@@ -97,7 +103,7 @@
         }
     }
     &__title {
-        margin-top: 140px;
+        margin: 140px auto 0;
         width: 1080px;
         height: 110px;
         font-family: Circe;
@@ -108,6 +114,7 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #939393;
+        white-space: pre;
     }
     &__list {
         padding-top: 140px;
@@ -115,6 +122,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 20px 20px;
+        &-btn {
+            max-width: 1260px;
+            margin: 0 auto;
+        }
         &-item {
             width: 530px;
             height: 157px;
@@ -192,7 +203,7 @@
 }
 
 .skills__tabs {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: transparent;
     width: 100%;
     margin-top: 105px;
 }
@@ -206,6 +217,8 @@
 }
 .skills__tabs ul {
     list-style: none;
+    max-width: 1260px;
+    margin: 0 auto;
 }
 .skills__tabs input {
     display: block;
@@ -254,7 +267,7 @@ label.skill__tab {
     height: 65px;
     z-index: 10;
     &:nth-child(1) {
-        padding: 20px 40px 20px 180px;
+        padding: 20px 40px 20px 40px;
     }
     &:nth-child(2) {
         padding: 20px 40px 20px 40px;

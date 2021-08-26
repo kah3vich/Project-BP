@@ -1,7 +1,13 @@
 .s-showing {
     position: relative;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__text {
         padding: 110px 90px 0 180px;
+        max-width: 1440px;
+        margin: 0 auto;
         &-title {
             width: 538px;
             height: 165px;

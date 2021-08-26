@@ -5,6 +5,9 @@
     padding: 39px 0px 92px 0px;
     position: relative;
     overflow: hidden;
+    & .container {
+        max-width: 1440px;
+    }
     &__logo {
         z-index: 5;
     }

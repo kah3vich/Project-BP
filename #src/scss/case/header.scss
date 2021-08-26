@@ -6,6 +6,10 @@
     padding: 39px 0px 0px 0px;
     position: relative;
     overflow: hidden;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__logo {
         z-index: 5;
     }
@@ -118,14 +122,16 @@
         }
     }
     &__search {
+        max-width: 1440px;
+        transform:  translate(-50%, -50%);
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: 97%;
+        left: 50%;
         padding: 0px 90px 64px 90px;
         &-arrow {
             width: 26px;

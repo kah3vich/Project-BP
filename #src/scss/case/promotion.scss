@@ -32,6 +32,17 @@
             color: #222121;
         }
         &-img {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 405px;
+            height: 197px;
+            left: -20px;
+            top: 47px;
+            border: 1px solid #DC4139;
+            z-index: -1;
+          }
             & img {
                 width: 400px;
                 height: 223px;
@@ -55,7 +66,8 @@
    }
    
    .dws-form {
-    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 1440px;
+    margin: 0 auto;
    }
    .dws-form a {
     text-decoration: none;

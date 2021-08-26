@@ -7,6 +7,8 @@
     &__container {
         display: flex;
         width: 1440px;
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__content {
         z-index: 10;
@@ -83,6 +85,7 @@
             color: #9C9C9C;
         }
         &-add {
+            white-space: pre;
             margin-top: 109px;
             width: 723px;
             height: 165px;
@@ -182,7 +185,6 @@
    }
    
    .dws-form {
-    background-color: rgba(255, 255, 255, 0.2);
     width: 100%;
     margin-top: 105px;
    }
@@ -196,6 +198,8 @@
    }
    .dws-form ul {
     list-style: none;
+    max-width: 1440px;
+    margin: 0 auto;
    }
    .dws-form input {
     display: block;
@@ -232,7 +236,7 @@
     height: 65px;
     z-index: 10;
     &:nth-child(1) {
-        padding: 20px 40px 20px 180px;
+        padding: 20px 40px 20px 40px;
     }
     &:nth-child(2) {
         padding: 20px 40px 20px 40px;
@@ -334,7 +338,7 @@ button.skills__info-btn {
 		transition: .15s .25s ease left, .5s .05s ease color;
 	}
 	&.btn-right-after:before {
-		content: 'Связаться с нами';
+		content: '';
 		position: absolute;
 		left: -230px;
 		top: 14px;

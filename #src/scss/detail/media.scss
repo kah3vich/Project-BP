@@ -353,6 +353,9 @@
     .dt-header {
         height: 100%;
     }
+    .dt-process__text {
+        white-space: normal;
+    }
 }
 @media (max-width: 1000px) {
     .dt-header__container {

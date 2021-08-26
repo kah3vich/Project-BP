@@ -6,6 +6,10 @@
     padding: 39px 0px 0px 0px;
     position: relative;
     overflow: hidden;
+    & .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__logo {
         z-index: 5;
     }
@@ -76,7 +80,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 90px 0px 0px 0px;
+        // padding: 90px 0px 0px 0px;
         margin: 0 auto;
     }
     &__info {
@@ -106,7 +110,7 @@
             z-index: 5;
         }
         &-text {
-            margin-top: 43px;
+            margin-top: 23px;
             width: 250px;
             height: 44px;
             font-family: Circe;
@@ -149,10 +153,14 @@
         }
     }
     &__image {
+        margin-top: 50px;
         width: 461px;
         height: 461px;
         position: relative;
         z-index: 5;
+        &-media {
+            display: none;
+        }
         &-add {
             display: none;
             margin-top: 11px;
@@ -194,14 +202,16 @@
         }
     }
     &__search {
+        max-width: 1440px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: 97%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         padding: 0px 90px 64px 90px;
         &-arrow {
             width: 26px;
@@ -310,7 +320,7 @@ button.header__info-btn {
 		transition: .15s .25s ease left, .5s .05s ease color;
 	}
 	&.btn-right-after:before {
-		content: 'Найти точки роста';
+		content: '';
 		position: absolute;
 		left: -230px;
 		top: 14px;
