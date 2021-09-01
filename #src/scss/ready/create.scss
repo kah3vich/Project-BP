@@ -1,0 +1,120 @@
+.rea-create {
+    position: relative;
+    padding: 90px 0;
+    & .container {
+        max-width: 1440px;
+    }
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 90px;
+        &-title {
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 55px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #000;
+            & span {
+                color: #DC4139;
+            }
+        }
+        &-add {
+            margin-top: 145px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-1  /";
+                white-space: pre;
+                position: absolute;
+                top: -62px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #9C9C9C;
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #DC4139;
+        border-bottom: 1px solid #DC4139;
+        margin-top: 86px;
+        &-item {
+            width: 360px;
+            height: 213px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-right: 1px solid #DC4139;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: -40px;
+                left: 142px;
+                border-radius: 50%;
+                width: 77px;
+                height: 77px;
+                border: 1px solid #DC4139;
+                background: gainsboro;
+                
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: -35px;
+                left: 147px;
+                border-radius: 50%;
+                width: 69px;
+                height: 69px;
+                background: #DC4139;
+                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+                z-index: 10;
+            }
+            &:nth-child(1) {
+                border-left: 1px solid #DC4139;
+            }
+        }
+        &-title {
+            margin-top: 53px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 46px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        &-text {
+            margin-top: 1px;
+            width: 215px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            color: #535353;
+        }   
+    }
+}

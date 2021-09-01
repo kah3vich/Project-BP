@@ -100,6 +100,9 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #505050;
+            & span {
+                color: #DC4139;
+            }
         }
     }
     &__title {

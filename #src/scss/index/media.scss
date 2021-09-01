@@ -551,7 +551,11 @@
 
 
 
-
+@media (max-width: 1505px) {
+    .team__block-img {
+        overflow: hidden;
+    }
+}
 @media (max-width: 1440px) {
     .skills__container {
         width: 100%;
@@ -567,6 +571,11 @@
     }
     .skills__container {
         padding: 0;
+    }
+}
+@media (max-width: 1430px) {
+    .team__block-img {
+        display: none;
     }
 }
 @media (max-width: 1350px) {

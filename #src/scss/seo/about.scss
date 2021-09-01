@@ -1,4 +1,4 @@
-.s-about {
+.seo-about {
     position: relative;
     &__block {
         max-width: 1440px;
@@ -21,7 +21,6 @@
         }
         &-title {
             margin-top: 54px;
-            width: 340px;
             height: 110px;
             font-family: Circe;
             font-style: normal;
@@ -31,6 +30,9 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #505050;
+            & span {
+                color: #DC4139;
+            }
         }
         &-info {
             margin-top: 54px;
@@ -106,8 +108,8 @@
             align-items: center;
             justify-content: center;
             border-right: 1px solid #949494;
-            &:last-child {
-                border-right: none;
+            &:nth-child(1) {
+                border-left: 1px solid #949494;
             }
         }
         &-number {
@@ -119,7 +121,7 @@
             line-height: 55px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #000000;
+            color: #DC4139;
         }
         &-text {
             height: 24px;
@@ -137,7 +139,7 @@
 
 
 // Button
-button.s-about__block-btn {
+button.seo-about__block-btn {
     font-family: Circe;
 	letter-spacing: 1px;
 	background: none;
@@ -184,12 +186,12 @@ button.s-about__block-btn {
 			left: 100%;
 			width: 70%;
 		}
-		.s-about__block-btn-right.btn-right-after:after {
+		.seo-about__block-btn-right.btn-right-after:after {
 			left: -80px;
 			color:$black;
 			transition: .2s .2s ease all;
 		}
-		.s-about__block-btn-right.btn-right-after:before {
+		.seo-about__block-btn-right.btn-right-after:before {
 			left: -142px;
             top: 19px;
 			opacity: 0.5;
@@ -198,7 +200,7 @@ button.s-about__block-btn {
 		}
 	}
 }
-.s-about__block-btn-right {
+.seo-about__block-btn-right {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -217,7 +219,7 @@ button.s-about__block-btn {
 		transition: .15s .25s ease left, .5s .05s ease color;
 	}
 	&.btn-right-after:before {
-		content: 'Найти точки роста';
+		content: '';
 		position: absolute;
 		left: -230px;
 		top: 14px;

@@ -3,6 +3,117 @@ var wow = new WOW({
     mobile: false, // отключать анимацию на мобильных устройствах ( зависит от размера экрана )
 });
   wow.init(); // инициализация анимации 
+var swiper = new Swiper('.reaSlider', { // объявляем слайдер 
+    pagination: { // счетчик сладов "1/6"
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: { // указываем навигацию через стрелочки 
+      nextEl: '.swiper-button-next', // стрелочка - следующий слайд 
+      prevEl: '.swiper-button-prev', // стрелочка - предыдущий слайд
+    },
+    speed: 700, // скорость прокрутки слайдов 
+    breakpoints: { // адаптация слайдера 
+      1700: { // после размера экрана >1700 сработают указанный параметры 
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      1200: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      992: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      }
+    },
+  });
+$(document).ready(function(){
+        $('#bit').on('change', function(){
+            $('#bit-showing__list-text-1').text(this.checked ? '338,381' : '104,457');
+            $('#bit-showing__list-text-2').text(this.checked ? '64,810' : '26,740');
+            $('#bit-showing__list-text-3').text(this.checked ? '340' : '122');
+            $('#bit-showing__list-text-4').text(this.checked ? '321' : '650,000');
+        });
+});
+
+
+var swiper = new Swiper('.bitSlider', { // объявляем слайдер 
+    pagination: { // счетчик сладов "1/6"
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: { // указываем навигацию через стрелочки 
+      nextEl: '.swiper-button-next', // стрелочка - следующий слайд 
+      prevEl: '.swiper-button-prev', // стрелочка - предыдущий слайд
+    },
+    speed: 700, // скорость прокрутки слайдов 
+    breakpoints: { // адаптация слайдера 
+      1700: { // после размера экрана >1700 сработают указанный параметры 
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      1200: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      992: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      }
+    },
+  });
+
+$(document).ready(function(){
+
+    $('#hel').on('change', function(){
+        $('#hel-expectation__list-text-1').text(this.checked ? 'Высокая скорость загрузки' : 'Мы поможем вам выстроить прозрачную структуру бизнеса.');
+        $('#hel-expectation__list-text-2').text(this.checked ? 'Поисковые системы отлично ранжируют подобные сайты' : 'Поделимся уникальными бизнес стратегиями, которые освоили сами.');
+    });
+});
+$(document).ready(function () {
+    $(".rec-skills__tabs").on("click", ".rec-skill__tab", function () {
+        $(".rec-skills__tabs").find(".rec-skills__active").removeClass("rec-skills__active");
+
+        $(this).addClass("rec-skills__active");
+        $(".rec-skill__tab-form").eq($(this).index()).addClass("rec-skills__active");
+    });
+});
+$(document).ready(function(){
+
+    $('#opt').on('change', function(){
+        $('#opt-expectation__list-text-1').text(this.checked ? 'Высокая скорость загрузки' : 'Низкая скорость загрузки, некорректный контент и плохое юзабилити сайта.');
+        $('#opt-expectation__list-text-2').text(this.checked ? 'Поисковые системы отлично ранжируют подобные сайты' : 'Поисковые системы плохо ранжируют подобные сайты за счет низкого качества сайта.');
+    });
+});
+var swiper = new Swiper('.peopleSMM', { // объявляем слайдер 
+    in: {
+        effect: "fadeIn",
+      },
+    pagination: { // счетчик сладов "1/6"
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: { // указываем навигацию через стрелочки 
+      nextEl: '.swiper-button-next', // стрелочка - следующий слайд 
+      prevEl: '.swiper-button-prev', // стрелочка - предыдущий слайд
+    },
+    speed: 700, // скорость прокрутки слайдов 
+    breakpoints: { // адаптация слайдера 
+      1700: { // после размера экрана >1700 сработают указанный параметры 
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      1200: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      992: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      }
+    },
+  });
 $(document).ready(function(){ // стандартный код для начало работы jquery 
     // если страница загрузилась ( стили ), то код начинает свою работу 
     
@@ -10,11 +121,10 @@ $(document).ready(function(){ // стандартный код для начал
     
     
         $('#box').on('change', function(){
-            $('#s-showing__list-text-1').text(this.checked ? '338,381' : '104,457');
-            $('#s-showing__list-text-2').text(this.checked ? '64,810' : '26,740');
-            $('#s-showing__list-text-3').text(this.checked ? '340' : '122');
+            $('#seo-showing__list-text-1').text(this.checked ? '338,381' : '104,457');
+            $('#seo-showing__list-text-2').text(this.checked ? '64,810' : '26,740');
+            $('#seo-showing__list-text-3').text(this.checked ? '340' : '122');
         });
-    
     });
     
     var swiper = new Swiper(".mySwiper", {
@@ -22,6 +132,36 @@ $(document).ready(function(){ // стандартный код для начал
         slidesPerView: 6,
         spaceBetween: 30,
     });
+
+
+    var swiper = new Swiper('.newSeo', { // объявляем слайдер 
+        in: {
+            effect: "fadeInDown",
+          },
+        pagination: { // счетчик сладов "1/6"
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: { // указываем навигацию через стрелочки 
+          nextEl: '.swiper-button-next', // стрелочка - следующий слайд 
+          prevEl: '.swiper-button-prev', // стрелочка - предыдущий слайд
+        },
+        speed: 700, // скорость прокрутки слайдов 
+        breakpoints: { // адаптация слайдера 
+          1700: { // после размера экрана >1700 сработают указанный параметры 
+              slidesPerView: 2, // количество слайдов, которых будет показываться 
+              spaceBetween: 20, // отступ между слайдами 
+          },
+          1200: {
+              slidesPerView: 2, // количество слайдов, которых будет показываться 
+              spaceBetween: 20, // отступ между слайдами 
+          },
+          992: {
+              slidesPerView: 2, // количество слайдов, которых будет показываться 
+              spaceBetween: 20, // отступ между слайдами 
+          }
+        },
+      });
 $('select#sorts').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
   
@@ -112,6 +252,45 @@ $('select#promotion').each(function(){
     });
 
 });
+
+
+$('.c-promotion__block-btn-open').on('click', function() {
+    $('.c-promotion__blocks-hidden').removeClass('c-promotion__block-none');
+    $('.c-promotion__block-btn-close').removeClass('c-promotion__block-none');
+    $(this).addClass('c-promotion__block-none');
+});
+$('.c-promotion__block-btn-close').on('click', function() {
+    $('.c-promotion__blocks-hidden').addClass('c-promotion__block-none');
+    $(this).addClass('c-promotion__block-none');
+    $('.c-promotion__block-btn-open').removeClass('c-promotion__block-none');
+});
+var swiper = new Swiper('.infoImage', { // объявляем слайдер 
+    pagination: { // счетчик сладов "1/6"
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: { // указываем навигацию через стрелочки 
+      nextEl: '.swiper-button-next', // стрелочка - следующий слайд 
+      prevEl: '.swiper-button-prev', // стрелочка - предыдущий слайд
+    },
+    speed: 700, // скорость прокрутки слайдов 
+    breakpoints: { // адаптация слайдера 
+      1700: { // после размера экрана >1700 сработают указанный параметры 
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      1200: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      },
+      992: {
+          slidesPerView: 1, // количество слайдов, которых будет показываться 
+          spaceBetween: 0, // отступ между слайдами 
+      }
+    },
+  });
+
+
 // Аккордеон для блока skills
 
 document.querySelectorAll('.skills__accordion-item__trigger').forEach((item) => 
@@ -159,7 +338,6 @@ var swiper = new Swiper('.swiper-skills-1', {
         }
     },
     });
-
 
 
 // Слайдер для блока skills 2
@@ -734,6 +912,123 @@ class Grain_7 {
 }
 
 
+// Задний фон 8
+
+class Grain_8 {
+    constructor (el_8) {
+        this.patternSize = 150;
+        this.patternScaleX = 1;
+        this.patternScaleY = 1;
+        this.patternRefreshInterval = 3; 
+        this.patternAlpha = 15; 
+        this.canvas = el_8;
+        this.ctx = this.canvas.getContext('2d');
+        this.ctx.scale(this.patternScaleX, this.patternScaleY);
+        this.patternCanvas = document.createElement('canvas');
+        this.patternCanvas.width = this.patternSize;
+        this.patternCanvas.height = this.patternSize;
+        this.patternCtx = this.patternCanvas.getContext('2d');
+        this.patternData = this.patternCtx.createImageData(this.patternSize, this.patternSize);
+        this.patternPixelDataLength = this.patternSize * this.patternSize * 4; 
+        this.resize = this.resize.bind(this);
+        this.loop = this.loop.bind(this);
+        this.frame = 0;
+        window.addEventListener('resize', this.resize);
+        this.resize();
+        window.requestAnimationFrame(this.loop);
+    }
+    resize () {
+        this.canvas.width = window.innerWidth * devicePixelRatio;
+        this.canvas.height = window.innerHeight * devicePixelRatio;
+    }
+    update () {
+        const {patternPixelDataLength, patternData, patternAlpha, patternCtx} = this;
+        for (let i = 0; i < patternPixelDataLength; i += 4) {
+        const value = Math.random() * 255;
+        patternData.data[i] = value;
+        patternData.data[i + 1] = value;
+        patternData.data[i + 2] = value;
+        patternData.data[i + 3] = patternAlpha;
+        }
+        patternCtx.putImageData(patternData, 0, 0);
+    }
+    draw () {
+        const {ctx, patternCanvas, canvas, viewHeight} = this;
+        const {width, height} = canvas;
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = ctx.createPattern(patternCanvas, 'repeat');
+        ctx.fillRect(0, 0, width, height);
+    }
+    loop () {
+        const shouldDraw = ++this.frame % this.patternRefreshInterval === 0;
+        if (shouldDraw) {
+        this.update();
+        this.draw();
+        }
+        window.requestAnimationFrame(this.loop);
+    }
+}
+
+
+
+// Задний фон 9
+
+class Grain_9 {
+    constructor (el_9) {
+        this.patternSize = 150;
+        this.patternScaleX = 1;
+        this.patternScaleY = 1;
+        this.patternRefreshInterval = 3; 
+        this.patternAlpha = 15; 
+        this.canvas = el_9;
+        this.ctx = this.canvas.getContext('2d');
+        this.ctx.scale(this.patternScaleX, this.patternScaleY);
+        this.patternCanvas = document.createElement('canvas');
+        this.patternCanvas.width = this.patternSize;
+        this.patternCanvas.height = this.patternSize;
+        this.patternCtx = this.patternCanvas.getContext('2d');
+        this.patternData = this.patternCtx.createImageData(this.patternSize, this.patternSize);
+        this.patternPixelDataLength = this.patternSize * this.patternSize * 4; 
+        this.resize = this.resize.bind(this);
+        this.loop = this.loop.bind(this);
+        this.frame = 0;
+        window.addEventListener('resize', this.resize);
+        this.resize();
+        window.requestAnimationFrame(this.loop);
+    }
+    resize () {
+        this.canvas.width = window.innerWidth * devicePixelRatio;
+        this.canvas.height = window.innerHeight * devicePixelRatio;
+    }
+    update () {
+        const {patternPixelDataLength, patternData, patternAlpha, patternCtx} = this;
+        for (let i = 0; i < patternPixelDataLength; i += 4) {
+        const value = Math.random() * 255;
+        patternData.data[i] = value;
+        patternData.data[i + 1] = value;
+        patternData.data[i + 2] = value;
+        patternData.data[i + 3] = patternAlpha;
+        }
+        patternCtx.putImageData(patternData, 0, 0);
+    }
+    draw () {
+        const {ctx, patternCanvas, canvas, viewHeight} = this;
+        const {width, height} = canvas;
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = ctx.createPattern(patternCanvas, 'repeat');
+        ctx.fillRect(0, 0, width, height);
+    }
+    loop () {
+        const shouldDraw = ++this.frame % this.patternRefreshInterval === 0;
+        if (shouldDraw) {
+        this.update();
+        this.draw();
+        }
+        window.requestAnimationFrame(this.loop);
+    }
+}
+
+
 const el_1 = document.querySelector('.grain-1');
 const grain_1 = new Grain_1(el_1);
 
@@ -760,4 +1055,13 @@ const grain_6 = new Grain_5(el_6);
 
 const el_7 = document.querySelector('.grain-7');
 const grain_7 = new Grain_7(el_7);
+
+
+const el_8 = document.querySelector('.grain-8');
+const grain_8 = new Grain_8(el_8);
+
+
+const el_9 = document.querySelector('.grain-9');
+const grain_9 = new Grain_9(el_9);
+
 

@@ -28,7 +28,6 @@
             }
         }
         &-title {
-            white-space: pre;
             width: 375px;
             height: 165px;
             font-family: Circe;
@@ -41,6 +40,9 @@
             color: $gray-50;
             margin-bottom: 106px;
             z-index: 5;
+            & span {
+                color: #dc4139;
+            }
         }
         &-number {
             height: 18px;
@@ -112,9 +114,9 @@
     &__image {
         z-index: 5;
         &-container  {
-            width: 395px;
-            height: 248px;
-            background: $white-F2;
+            width: 536px;
+            height: 313px;
+            background: #F45E5F;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -125,43 +127,64 @@
         }
     }
     &__stats {
-        width: 395px;
+        width: 100%;
         margin: 151px 0px 152px 0px;
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
         &-list {
             display: flex;
             flex-direction: column;
         }
         &-item {
             height: 140px;
-            border-top: 1px solid $gray-94;
+            border-top: 1px solid #dc4139;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             &:last-child {
-                border-bottom: 1px solid $gray-94;
+                border-bottom: 1px solid #dc4139;
             }
         }
         &-title {
-            width: 135px;
-            height: 22px;
+            height: 46px;
             font-family: Circe;
             font-style: normal;
             font-weight: bold;
-            font-size: 15px;
-            line-height: 22px;
-            text-decoration-line: underline;
+            font-size: 17px;
+            line-height: 46px;
+            letter-spacing: 0.01em;
             text-transform: uppercase;
-            color: $black-21;
+            color: #000000;
+        }
+        &-text {
+            width: 359px;
+            height: 50px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: #535353;
         }
         &-circle {
             width: 90px;
             height: 90px;
-            border: 1px dashed $gray-3D;
+            border: 1px solid #dc4139;
             border-radius: 50%;
             margin-right: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-left: 50px;
+            &-item {
+                width: 69px;
+                height: 69px;
+                background: #DC4139;
+                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+                border-radius: 50%;
+            }
         }
     }
     &__media {
@@ -274,3 +297,51 @@ button.info__text-btn {
 	}
 }
 
+.infoImage .swiper-container {
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+  }
+  .infoImage .swiper-slide {
+    font-size: 18px;
+    background: #DC4139;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .info__stats-img-controls {
+      position: relative;
+  }
+  .info__stats-img-controls .swiper-controls {
+    position: absolute;
+    top: 40px;
+    left: 170px;
+    width: 200px;
+    height: 30px;
+    margin-left: auto;
+    padding: 30px 0 10px 0;
+    z-index: 0;
+  }
+  .info__stats-img-controls .swiper-controls .swiper-button-next::after {
+    content: "⟶";
+    font-size: 60px;
+    color: black;
+  }
+  .info__stats-img-controls .swiper-controls .swiper-button-prev::after {
+    content: "⟵";
+    font-size: 60px;
+    color: black;
+  }

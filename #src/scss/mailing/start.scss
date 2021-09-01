@@ -1,0 +1,254 @@
+.mail-start {
+    position: relative;
+    padding: 226px 0 90px 0;
+    & .container {
+        max-width: 1440px;
+    }
+    &__block {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 90px;
+    }
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        &-add {
+            width: 145px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-2  /";
+                white-space: pre;
+                position: absolute;
+                top: -62px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+            &::before {
+                content: "digital агентство";
+                width: 200%;
+                position: absolute;
+                top: 8px;
+                left: 216px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-title {
+            width: 360px;
+            height: 141px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 47px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: $black;
+            margin-top: 54px;
+            & span {
+                color: #DC4139;
+            }
+        }
+        &-info {
+            width: 261px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: #535353;
+        }
+        &-item {
+            margin-top: 36px;
+            width: 426px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #535353;
+        }
+        &-block {
+            margin-top: 53px;
+            width: 235px;
+            height: 96px;
+            background: #F7F7F7;
+            border-radius: 23px;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 15px;
+        &-item {
+            width: 540px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #DC4139;
+            &:last-child {
+                border-bottom: 1px solid #dc4139;
+            }
+        }
+        &-circle {
+            width: 89px;
+            height: 89px;
+            border: 1px solid #DC4139;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            border-radius: 50%;
+            &-add {
+                width: 69px;
+                height: 69px;
+                background: #DC4139;
+                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+                border-radius: 50%;
+            }
+        }
+        &-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 42px;
+            margin-right: 90px;
+        }
+        &-title {
+            width: 153px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 46px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        &-text {
+            margin-top: 1px;
+            width: 251px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: #535353;
+        }
+    }
+}
+
+// Button
+button.mail-start__text-btn {
+    font-family: Circe;
+	letter-spacing: 1px;
+	background: none;
+	color: $black;
+	position: relative;
+	outline: none;
+	border: none;
+	height: 50px;
+	width: 190px;
+	font-size: 12px;
+	z-index: 2;
+	transition: .01s .23s ease-out all;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 55%;
+		background: #DFDFDF;
+		z-index: -1;
+		transition: .3s ease-in all;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -5%;
+		top: 5%;
+		height: 90%;
+		width: 5%;
+		background:$white;
+		z-index: -1;
+		transition: .4s .02s ease-in all;
+	}
+	&:hover {
+		cursor: pointer;
+		color: transparent;
+		&:before {
+			left: 100%;
+			width: 25%;
+		}
+		&:after {
+			left: 100%;
+			width: 70%;
+		}
+		.mail-start__text-btn-right.btn-right-after:after {
+			left: -80px;
+			color:$black;
+			transition: .2s .2s ease all;
+		}
+		.mail-start__text-btn-right.btn-right-after:before {
+			left: -142px;
+            top: 19px;
+			opacity: 0.5;
+			color: $black;
+            text-align: center;
+		}
+	}
+}
+.mail-start__text-btn-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	&:after {
+		font-family: "FontAwesome";
+		content: '\2192';
+		font-size: 15px;
+		display: inline-block;
+		position: relative;
+		top: 26px;
+		transform: translate3D(0, -50%, 0);
+	}
+	&.btn-right-after:after {
+		left: -250px;
+		color: black;
+		transition: .15s .25s ease left, .5s .05s ease color;
+	}
+	&.btn-right-after:before {
+		content: '';
+		position: absolute;
+		left: -230px;
+		top: 14px;
+		opacity: 0;
+		transition: .2s ease-in all;
+	}
+}

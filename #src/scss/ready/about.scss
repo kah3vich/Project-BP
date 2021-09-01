@@ -1,0 +1,210 @@
+.rea-about {
+    position: relative;
+    padding: 90px 0;
+    &__block {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 0 90px 0 180px;
+        &-add {
+            width: 100%;
+            height: 29px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "/  00-1  /";
+                white-space: pre;
+                top: -62px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-title {
+            margin-top: 54px;
+            height: 110px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 55px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #505050;
+            & span {
+                color: #DC4139;
+            }
+        }
+        &-text {
+            margin-top: 32px;
+            width: 403px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: #535353;
+        }
+        &-people {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 60px;
+            &-image {
+                width: 152px;
+                height: 152px;
+                border-radius: 50%;
+                overflow: hidden;
+                & img {
+                    width: 152px;
+                    height: 152px;
+                }
+            }
+            &-block {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                margin-left: 37px;
+            }
+            &-name {
+                height: 46px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 46px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #505050;
+            }
+            &-skills {
+                height: 24px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 24px;
+                color: #747474;
+            }
+        }
+        &-list {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 56px;
+        }
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 34px;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+            &-text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 377px;
+            }
+            &-title {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 25px;
+                color: #535353;
+            }
+            &-info {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 25px;
+                color: #535353;
+            }
+            &-hr {
+                margin-top: 15px;
+                width: 377px;
+                height: 0px;
+                border-top: 1px solid #DC4139;
+                &-1 {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 207px;
+                        height: 0px;
+                        border-bottom: 5px solid #DC4139;
+                    }
+                }
+                &-2 {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 110px;
+                        height: 0px;
+                        border-bottom: 5px solid #DC4139;
+                    }
+                }
+                &-3 {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 146px;
+                        height: 0px;
+                        border-bottom: 5px solid #DC4139;
+                    }
+                }
+            }
+        }
+        &-img {
+            width: 516px;
+            height: 580px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 34px;
+                left: -24px;
+                width: 499px;
+                height: 567px;
+                border: 1px solid #DC4139;
+                z-index: -1;
+            }
+            & img {
+                width: 516px;
+                height: 580px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+

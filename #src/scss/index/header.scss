@@ -108,6 +108,9 @@
             text-transform: uppercase;
             color: #292929;
             z-index: 5;
+            & span {
+                color: #DC4139;
+            }
         }
         &-text {
             margin-top: 23px;
@@ -132,22 +135,6 @@
                     border: 1px solid #dc4139;
                     top: 15px;
                     left: -23px;
-                }
-                &::after {
-                    content: "Расскажите о Вашей задаче, а мы предложим решение";
-                    position: absolute;
-                    width: 165px;
-                    left: 30px;
-                    top: 64px;
-                    background: #DC4139;
-                    border: 1px solid #DC4139;
-                    padding: 18px 36px 18px 41px;
-                    font-family: Circe;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 13px;
-                    line-height: 18px;
-                    color: #FFFFFF;
                 }
             }
         }

@@ -1,0 +1,171 @@
+.opt-about {
+    position: relative;
+    padding: 0 0 120px 0;
+    &__block {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 225px 90px 0 180px;
+        &-add {
+            width: 100%;
+            height: 29px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-1  /";
+                white-space: pre;
+                position: absolute;
+                top: -62px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #9C9C9C;
+            }
+            &::before {
+                content: "digital агентство";
+                width: 200%;
+                position: absolute;
+                top: 8px;
+                left: 216px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-title {
+            margin-top: 54px;
+            width: 389px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 55px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #505050;
+            & span {
+                color: #DC4139;
+            }
+        }
+        &-info {
+            margin-top: 35px;
+            width: 400px;
+            height: 52px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 26px;
+            color: #535353;
+        }
+        &-text {
+            margin-top: 32px;
+            width: 414px;
+            height: 104px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #535353;
+        }
+        &-btn {
+            &-container {
+                margin-top: 75px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 97px;
+                    height: 47px;
+                    border: 1px solid #dc4139;
+                    top: 15px;
+                    left: -23px;
+                }
+            }
+        }
+        &-img {
+            width: 602px;
+            height: 580px;
+            object-fit: cover;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: -30px;
+                top: 40px;
+                width: 582px;
+                height: 567px;
+                border: 1px solid #DC4139;
+                z-index: -1;
+            }
+        }
+    }
+    &__list {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        margin-top: 200px;
+        padding: 0 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #949494;
+        border-bottom: 1px solid #949494;
+        &-item {
+            height: 161px;
+            width: 271px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #949494;
+            &:nth-child(1) {
+                border-left: 1px solid #949494;
+            }
+        }
+        &-number {
+            height: 55px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 55px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #DC4139;
+        }
+        &-text {
+            height: 24px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            margin-top: 5px;
+        }
+    }
+}
+
+

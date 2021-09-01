@@ -262,7 +262,7 @@ button.info__text-btn {
 		transition: .15s .25s ease left, .5s .05s ease color;
 	}
 	&.btn-right-after:before {
-		content: 'Связаться с нами';
+		content: '';
 		position: absolute;
 		left: -230px;
 		top: 14px;

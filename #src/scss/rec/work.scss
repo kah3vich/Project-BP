@@ -1,0 +1,118 @@
+.rec-work {
+    position: relative;
+    padding: 90px 0;
+    & .container {
+        max-width: 1440px;
+    }
+    &__block {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 90px;
+    }
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        &-add {
+            width: 190px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+            color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-2  /";
+                white-space: pre;
+                position: absolute;
+                top: -62px;
+                left: 0;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+            &::before {
+                content: "digital агентство";
+                position: absolute;
+                left: 216px;
+                top: 8px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                width: 200%;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
+        }
+        &-title {
+            margin-top: 53px;
+            width: 389px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 47px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: $black;
+            & span {
+                color: #DC4139;
+            }
+        }
+        &-info {
+            margin-top: 42px;
+            width: 366px;
+            height: 48px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: #535353;
+        }
+        &-item {
+            width: 438px;
+            height: 100px;
+            font-family: Circe;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: #535353;
+            margin-top: 42px;
+        }
+    }
+    &__image {
+        width: 516px;
+        height: 470px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 60px;
+            width: 499px;
+            height: 460px;
+            border: 1px solid #DC4139;
+            z-index: -1;
+        }
+        &-item {
+            overflow: hidden;
+            & img {
+                width: 100%;
+                object-fit: cover;
+                z-index: 10;
+            }
+        }
+    }
+}

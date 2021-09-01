@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BP</title>
+
+    <!-- Сброс стилей -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+        <!-- Библиотеки анимации WOW -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"/>
+        <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+        <!-- Библиотеки анимации GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Дополнительные инструменты -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- Слайдер - стили .css -->
+        <!-- <link rel="stylesheet" href="add/swiper 6.4.5.css"> -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+        <!-- Слайдер - скрипты .js -->
+        <!-- <script src="add/swiper 6.4.5.js"></script> -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+<section class="smm-header"> 
+    <canvas class="grain-1"></canvas>
+    <div class="container">
+        <div class="smm-header__nav">
+            <div class="smm-header__logo">
+                <a href="/">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="41" height="41" fill="#DC4139"/>
+                        <path d="M11.746 25.982V13.436C13.042 13.376 14.254 13.346 15.382 13.346C16.774 13.346 17.812 13.622 18.496 14.174C19.18 14.726 19.522 15.488 19.522 16.46C19.522 17.816 18.922 18.77 17.722 19.322V19.358C18.406 19.538 18.946 19.88 19.342 20.384C19.738 20.876 19.936 21.512 19.936 22.292C19.936 23.516 19.516 24.452 18.676 25.1C17.836 25.748 16.696 26.072 15.256 26.072C13.816 26.072 12.646 26.042 11.746 25.982ZM15.526 20.582H13.96V23.912C14.524 23.972 15.01 24.002 15.418 24.002C16.954 24.002 17.722 23.396 17.722 22.184C17.722 21.656 17.53 21.26 17.146 20.996C16.762 20.72 16.222 20.582 15.526 20.582ZM15.346 15.416C14.818 15.416 14.356 15.434 13.96 15.47V18.656H15.454C16.018 18.656 16.468 18.512 16.804 18.224C17.152 17.936 17.326 17.522 17.326 16.982C17.326 16.478 17.152 16.094 16.804 15.83C16.456 15.554 15.97 15.416 15.346 15.416ZM25.0694 21.446V26H22.8554V13.4C23.3834 13.4 23.9534 13.394 24.5654 13.382C25.1894 13.37 25.8134 13.364 26.4374 13.364C27.3254 13.364 28.0934 13.478 28.7414 13.706C29.4014 13.922 29.9114 14.228 30.2714 14.624C30.6314 15.008 30.8954 15.434 31.0634 15.902C31.2314 16.358 31.3154 16.862 31.3154 17.414C31.3154 18.554 30.9074 19.52 30.0914 20.312C29.2874 21.104 28.1594 21.5 26.7074 21.5C25.9754 21.5 25.4294 21.482 25.0694 21.446ZM26.6534 15.434L25.0694 15.47V19.34C25.7054 19.4 26.2274 19.43 26.6354 19.43C27.3434 19.43 27.9074 19.256 28.3274 18.908C28.7594 18.56 28.9754 18.056 28.9754 17.396C28.9754 16.088 28.2014 15.434 26.6534 15.434Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="smm-header__menu">
+                <p class="smm-header__menu-geo">г. Москва, Дельта Измайлово, офис 30
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.99983 0C4.51856 0 0.872925 3.64563 0.872925 8.1269C0.872925 9.60217 1.53455 11.1888 1.56228 11.2558C1.77597 11.763 2.19761 12.5508 2.50165 13.0126L8.07384 21.4555C8.30187 21.8016 8.63938 22 8.99983 22C9.36028 22 9.69779 21.8016 9.92582 21.456L15.4985 13.0126C15.803 12.5508 16.2242 11.763 16.4379 11.2558C16.4656 11.1893 17.1267 9.60265 17.1267 8.1269C17.1267 3.64563 13.4811 0 8.99983 0ZM15.5563 10.8848C15.3656 11.3394 14.9731 12.0723 14.7001 12.4863L9.12747 20.9296C9.01752 21.0965 8.98262 21.0965 8.87266 20.9296L3.3 12.4863C3.02703 12.0723 2.63455 11.3389 2.44381 10.8843C2.43568 10.8647 1.82903 9.40426 1.82903 8.1269C1.82903 4.17292 5.04585 0.956106 8.99983 0.956106C12.9538 0.956106 16.1706 4.17292 16.1706 8.1269C16.1706 9.40617 15.5625 10.8704 15.5563 10.8848Z" fill="#DC4139"/>
+                        <path d="M8.99974 3.8252C6.62717 3.8252 4.69727 5.75557 4.69727 8.12767C4.69727 10.4998 6.62717 12.4301 8.99974 12.4301C11.3723 12.4301 13.3022 10.4998 13.3022 8.12767C13.3022 5.75557 11.3723 3.8252 8.99974 3.8252ZM8.99974 11.474C7.15494 11.474 5.65337 9.97296 5.65337 8.12767C5.65337 6.28239 7.15494 4.7813 8.99974 4.7813C10.8445 4.7813 12.3461 6.28239 12.3461 8.12767C12.3461 9.97296 10.8445 11.474 8.99974 11.474Z" fill="#DC4139"/>
+                    </svg>
+                </p>
+                <div class="smm-header__menu-item">Меню</div>
+            </div>
+        </div>
+        <div class="smm-header__container">
+            <div class="smm-header__info">
+                <div class="smm-header__info-add">Проектная аналитика трафика</div>
+                <div class="smm-header__info-title"><span>SMM</span><br>сопровождение</div>
+                <div class="smm-header__info-text">Увидим то, что сможет перевернуть игру <br>и выйти на новый уровень</div>
+                <div class="smm-header__info-btn-container">
+                    <a href="#">
+                        <button class="smm-header__info-btn">Найти точки роста
+                            <span class="smm-header__info-btn-right"></span>
+                            <span class="smm-header__info-btn-right btn-right-after"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="smm-header__search">
+            <a href="#">
+                <div class="smm-header__search-arrow">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="25" height="25" rx="12.5" fill="#DC4139" stroke="#DC3F39"/>
+                        <g clip-path="url(#clip0)">
+                        <path d="M12.7258 16.5866L8.11328 11.9613C7.96225 11.8097 7.9625 11.5644 8.11406 11.4131C8.26561 11.2619 8.51109 11.2623 8.66224 11.4139L13.0002 15.7638L17.3382 11.4137C17.4893 11.2622 17.7347 11.2618 17.8862 11.4129C17.9622 11.4888 18.0002 11.5881 18.0002 11.6875C18.0002 11.7866 17.9625 11.8855 17.887 11.9612L13.2746 16.5866C13.202 16.6595 13.1032 16.7005 13.0002 16.7005C12.8972 16.7005 12.7985 16.6594 12.7258 16.5866Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="10" height="10" fill="white" transform="matrix(-4.37114e-08 1 1 4.37114e-08 8 9)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="#">
+                <div class="smm-header__search-item">
+                    <div class="smm-header__search-text">Старт</div>
+                    <div class="smm-header__search-circle">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="26" height="26" rx="13" fill="#DC4139"/>
+                            <path d="M17.2023 12.0714L11.6477 8.26875C11.3912 8.09301 11.1327 8 10.9179 8C10.5025 8 10.2456 8.33334 10.2456 8.89131V17.11C10.2456 17.6673 10.5022 18 10.9166 18C11.1317 18 11.3861 17.9069 11.6432 17.7307L17.2004 13.9281C17.5577 13.6832 17.7557 13.3535 17.7557 12.9996C17.7557 12.6458 17.5601 12.3163 17.2023 12.0714Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="smm-info">
+    <canvas class="grain-2"></canvas>
+    <div class="container">
+        <div class="smm-info__block">
+            <div class="smm-info__block-text">
+                <div class="smm-info__block-text-add">Кратко про SMM</div>
+                <div class="smm-info__block-text-title"><span>Social Media</span><br>Marketing работа<br>с соцсетями</div>
+                <div class="smm-info__block-text-item">Мы занимаемся созданием и ведением Ваших аккаунтов в социальных сетях. Берём на себя полное взаимодействие с клиентами и подписчиками.</div>
+                <div class="smm-info__block-btn-container">
+                    <a href="#">
+                        <button class="smm-info__block-btn">Найти точки роста
+                            <span class="smm-info__block-btn-right"></span>
+                            <span class="smm-info__block-btn-right btn-right-after"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="smm-info__block-image">
+                <img src="./img/seo/seo-image.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="smm-info__table">
+        <div class="smm-info__table-block">
+            <div class="smm-info__table-item smm-info__table-item-1">
+                <div class="smm-info__table-item-title">Стильный современный дизайн</div>
+                <div class="smm-info__table-item-text">Оформим страницу в соответствии с тематикой аккаунта. Уникальный дизайн.</div>
+            </div>
+            <div class="smm-info__table-item smm-info__table-item-2">
+                <div class="smm-info__table-item-title">Стильный современный дизайн</div>
+                <div class="smm-info__table-item-text">Оформим страницу в соответствии с тематикой аккаунта. Уникальный дизайн.</div>
+            </div>
+        </div>
+        <div class="smm-info__table-block">
+            <div class="smm-info__table-item">
+                <div class="smm-info__table-item-title smm-info__table-item-3">Стильный современный дизайн</div>
+                <div class="smm-info__table-item-text">Оформим страницу в соответствии с тематикой аккаунта. Уникальный дизайн.</div>
+            </div>
+            <div class="smm-info__table-item">
+                <div class="smm-info__table-item-title smm-info__table-item-4">Стильный современный дизайн</div>
+                <div class="smm-info__table-item-text">Оформим страницу в соответствии с тематикой аккаунта. Уникальный дизайн.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="smm-price">
+    <canvas class="grain-4"></canvas>
+    <div class="container">
+        <div class="smm-price__text">
+            <div class="smm-price__text-number">/ 00-5 /</div>
+            <div class="smm-price__text-add">Наши тарифы</div>
+            <div class="smm-price__text-title"><span>Фиксированные</span> цены</div>
+            <div class="smm-price__text-item">
+                У нас можно заказать СЕО продвижение вашего сайта по индивидуальным условиям. 
+                Однако для вашего удобства и наглядности, мы разработали три оптимальных тарифа, 
+                по которым мы гарантированно выведем ваш сайт в топ.
+            </div>
+        </div>
+        <div class="smm-price__block">
+            <ul class="smm-price__block-list">
+                <li class="smm-price__block-item">
+                    <div class="smm-price__block-key">СТАНДАРТНЫЙ</div>
+                    <div class="smm-price__block-text">Аудит трафика
+                        Аудит ссылочной массы
+                        Аудит рекламной стратегии
+                        Анализ 50 ключевых слов
+                        Сверка 50 посадочных страниц</div>
+                    <div class="smm-price__block-price">5 900₽</div>
+                    <div class="smm-price__block-add">Срок 3 рабочих дня.</div>
+                </li>
+                <li class="smm-price__block-item">
+                    <div class="smm-price__block-key">РАСШИРЕННЫЙ</div>
+                    <div class="smm-price__block-text">Аудит трафика
+                        Аудит ссылочной массы
+                        Аудит рекламной стратегии
+                        Анализ 50 ключевых слов
+                        Сверка 50 посадочных страниц</div>
+                    <div class="smm-price__block-price">12 900₽</div>
+                    <div class="smm-price__block-add">Срок 5 рабочих дней.</div>
+                </li>
+                <li class="smm-price__block-item">
+                    <div class="smm-price__block-key">ОПТИМАЛЬНЫЙ</div>
+                    <div class="smm-price__block-text">Аудит трафика
+                        Аудит ссылочной массы
+                        Аудит рекламной стратегии
+                        Анализ 50 ключевых слов
+                        Сверка 50 посадочных страниц</div>
+                    <div class="smm-price__block-price">21 900₽</div>
+                    <div class="smm-price__block-add">Срок 7 рабочих дней.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="smm-people">
+    <div class="container">
+        <div class="smm-people__block">
+            <div class="smm-people__block-slide">
+                <div class="swiper-container peopleSMM">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="smm-people__slide-block">
+                                <div class="smm-people__slide-title">Мы работаем <br>
+                                    над развитием аккаунта</div>
+                                <div class="smm-people__slide-name">Артур Кузнецов</div>
+                                <div class="smm-people__slide-text">Актуализация! Да, без нее никуда. Каждый день социальные сети применяют новые алгоритмы показа "реков" и прочих записей по интересам. Я мониторю каждую новую выходку социальной сети.</div>
+                            </div>
+                            <div class="smm-people__slide-image">
+                                <img src="./img/smm/people-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="smm-people__slide-block">
+                                <div class="smm-people__slide-title">Мы работаем <br>
+                                    над развитием аккаунта</div>
+                                <div class="smm-people__slide-name">Артур Кузнецов</div>
+                                <div class="smm-people__slide-text">Актуализация! Да, без нее никуда. Каждый день социальные сети применяют новые алгоритмы показа "реков" и прочих записей по интересам. Я мониторю каждую новую выходку социальной сети.</div>
+                            </div>
+                            <div class="smm-people__slide-image">
+                                <img src="./img/smm/people-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="smm-people__slide-block">
+                                <div class="smm-people__slide-title">Мы работаем <br>
+                                    над развитием аккаунта</div>
+                                <div class="smm-people__slide-name">Артур Кузнецов</div>
+                                <div class="smm-people__slide-text">Актуализация! Да, без нее никуда. Каждый день социальные сети применяют новые алгоритмы показа "реков" и прочих записей по интересам. Я мониторю каждую новую выходку социальной сети.</div>
+                            </div>
+                            <div class="smm-people__slide-image">
+                                <img src="./img/smm/people-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="smm-people__slide-block">
+                                <div class="smm-people__slide-title">Мы работаем <br>
+                                    над развитием аккаунта</div>
+                                <div class="smm-people__slide-name">Артур Кузнецов</div>
+                                <div class="smm-people__slide-text">Актуализация! Да, без нее никуда. Каждый день социальные сети применяют новые алгоритмы показа "реков" и прочих записей по интересам. Я мониторю каждую новую выходку социальной сети.</div>
+                            </div>
+                            <div class="smm-people__slide-image">
+                                <img src="./img/smm/people-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="smm-people__slide-block">
+                                <div class="smm-people__slide-title">Мы работаем <br>
+                                    над развитием аккаунта</div>
+                                <div class="smm-people__slide-name">Артур Кузнецов</div>
+                                <div class="smm-people__slide-text">Актуализация! Да, без нее никуда. Каждый день социальные сети применяют новые алгоритмы показа "реков" и прочих записей по интересам. Я мониторю каждую новую выходку социальной сети.</div>
+                            </div>
+                            <div class="smm-people__slide-image">
+                                <img src="./img/smm/people-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smm-people__block-control">
+                <div class="smm-people__text-controls">
+                    <div class="swiper-controls-smm">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="smm-new">
+    <canvas class="grain-5"></canvas>
+    <div class="container">
+        <div class="smm-new__text">
+            <div class="smm-new__text-add">Наш блог сеошника</div>
+            <div class="smm-new__text-title">Последние <br> новости  <span>СЕО</span></div>
+            <div class="smm-new__text-item">Мы периодически выкладываем интересные статьи в области СЕО продвижения</div>
+            <div class="smm-new__text-controls">
+                <div class="swiper-controls-seo">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <div class="smm-new__slide">
+            <div class="smm-new__slide-container">
+                    <div class="swiper-container newSeo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="smm-new__slide-date">26.08.2021</div>
+                                <div class="smm-new__slide-text">«Тинькофф» потратил на 
+                                    продвижение 11,5 млрд рублей 
+                                    в первом полугодии</div>
+                                <div class="smm-new__slide-tags">
+                                    <div class="smm-new__slide-tags-item">#Болтовня</div>
+                                    <div class="smm-new__slide-tags-item">#Маркетинг</div>
+                                    <div class="smm-new__slide-tags-item">#Технологии IT</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="smm-new__slide-date">26.08.2021</div>
+                                <div class="smm-new__slide-text">«Тинькофф» потратил на 
+                                    продвижение 11,5 млрд рублей 
+                                    в первом полугодии</div>
+                                <div class="smm-new__slide-tags">
+                                    <div class="smm-new__slide-tags-item">#Болтовня</div>
+                                    <div class="smm-new__slide-tags-item">#Маркетинг</div>
+                                    <div class="smm-new__slide-tags-item">#Технологии IT</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="smm-new__slide-date">26.08.2021</div>
+                                <div class="smm-new__slide-text">«Тинькофф» потратил на 
+                                    продвижение 11,5 млрд рублей 
+                                    в первом полугодии</div>
+                                <div class="smm-new__slide-tags">
+                                    <div class="smm-new__slide-tags-item">#Болтовня</div>
+                                    <div class="smm-new__slide-tags-item">#Маркетинг</div>
+                                    <div class="smm-new__slide-tags-item">#Технологии IT</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="smm-new__slide-date">26.08.2021</div>
+                                <div class="smm-new__slide-text">«Тинькофф» потратил на 
+                                    продвижение 11,5 млрд рублей 
+                                    в первом полугодии</div>
+                                <div class="smm-new__slide-tags">
+                                    <div class="smm-new__slide-tags-item">#Болтовня</div>
+                                    <div class="smm-new__slide-tags-item">#Маркетинг</div>
+                                    <div class="smm-new__slide-tags-item">#Технологии IT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="smm-footer">
+    <canvas class="grain-3"></canvas>
+    <div class="container">
+        <div class="smm-footer__container">
+            <div class="smm-footer__block">
+                <ul class="smm-footer__info">
+                    <li class="smm-footer__info-item">
+                        <div class="smm-footer__info-title">Офис</div>
+                        <div class="smm-footer__info-office">
+                            Москва <br>
+                            Дельта Измайлово, <br>
+                            офис 30
+                        </div>
+                        <div class="smm-footer__info-email">your@bpump.ru</div>
+                    </li>
+                    <li class="smm-footer__info-item">
+                        <div class="smm-footer__info-title">Телефон</div>
+                        <div class="smm-footer__info-phone">+7 (499) 344-97-77</div>
+                    </li>
+                    <li class="smm-footer__info-item">
+                        <div class="smm-footer__info-title">Разделы</div>
+                        <div class="smm-footer__info-sections">
+                            Web разработка <br>
+                            дизайн <br>
+                            продвижение <br>
+                            продюсерский центр
+                        </div>
+                    </li>
+                </ul>
+                <ul class="smm-footer__add">
+                    <li class="smm-footer__add-office">©2011—2021 Business Pump</li>
+                    <li class="smm-footer__add-phone">Политика конфиденциальности</li>
+                    <li class="smm-footer__add-sections">
+                        <a href="#">
+                            <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9309 8.62994C12.5327 8.32723 12.9876 7.99008 13.2994 7.62573C13.8541 6.96955 14.1278 6.09948 14.1278 5.02096C14.1278 3.97143 13.8541 3.07417 13.3067 2.32192C12.3931 1.09657 10.8469 0.469395 8.66084 0.436768H0V18.1155H8.07535C8.9853 18.1155 9.82818 18.0376 10.6076 17.8781C11.3871 17.7167 12.0614 17.4213 12.6323 16.9899C13.1399 16.6147 13.5641 16.1488 13.9012 15.5996C14.4341 14.7694 14.7006 13.8286 14.7006 12.7809C14.7006 11.7658 14.4668 10.9012 14.0027 10.1906C13.5332 9.48007 12.8444 8.95984 11.9309 8.62994ZM3.57273 3.50739H7.47355C8.33093 3.50739 9.03787 3.59984 9.59254 3.78292C10.2342 4.04938 10.5551 4.59136 10.5551 5.41793C10.5551 6.1593 10.3103 6.67772 9.82637 6.96955C9.33877 7.26139 8.70615 7.40821 7.93034 7.40821H3.57273V3.50739ZM9.74117 14.7368C9.30976 14.9452 8.70253 15.0485 7.9249 15.0485H3.57273V10.3338H7.98472C8.75328 10.3393 9.35145 10.4408 9.77924 10.6311C10.5406 10.9755 10.9194 11.6063 10.9194 12.5289C10.9194 13.6165 10.5279 14.3488 9.74117 14.7368Z" fill="black"/>
+                                <path d="M26.2127 1.26147H18.5325V3.46203H26.2127V1.26147Z" fill="black"/>
+                                <path d="M28.881 9.94598C28.7214 8.92183 28.3698 8.02094 27.8224 7.24332C27.2224 6.36237 26.4611 5.71707 25.5348 5.30922C24.6122 4.89956 23.5735 4.69473 22.4171 4.69655C20.4757 4.69655 18.8987 5.30378 17.6788 6.50919C16.4625 7.71823 15.8535 9.45656 15.8535 11.7224C15.8535 14.1386 16.5259 15.8842 17.8782 16.9555C19.225 18.0286 20.7802 18.5633 22.5458 18.5633C24.6829 18.5633 26.3451 17.9271 27.5323 16.6582C28.2918 15.857 28.7214 15.0685 28.8157 14.2945H25.2774C25.0726 14.677 24.8351 14.9761 24.5632 15.1936C24.0702 15.5924 23.4285 15.7918 22.6418 15.7918C21.8932 15.7918 21.2588 15.6268 20.7295 15.2987C19.8558 14.7731 19.399 13.8522 19.341 12.5417H28.997C29.0115 11.4124 28.9752 10.5442 28.881 9.94598ZM19.428 10.2849C19.5549 9.43481 19.863 8.7605 20.3524 8.26202C20.8419 7.76536 21.5343 7.51521 22.4207 7.5134C23.2382 7.5134 23.9215 7.74723 24.478 8.21671C25.0273 8.68981 25.3372 9.3768 25.4007 10.2849H19.428Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.7262 4.73136C16.8767 3.27594 15.7243 2.12359 14.2689 1.2741C12.8131 0.424641 11.224 0 9.50028 0C7.77672 0 6.18712 0.424641 4.73166 1.2741C3.27612 2.12346 2.12377 3.27581 1.27423 4.73136C0.424641 6.18699 0 7.77659 0 9.50002C0 11.2235 0.424771 12.8129 1.2741 14.2686C2.12359 15.724 3.27594 16.8764 4.73149 17.7259C6.18712 18.5754 7.77659 19 9.50011 19C11.2236 19 12.8133 18.5754 14.2688 17.7259C15.7243 16.8767 16.8766 15.724 17.726 14.2686C18.5754 12.813 19 11.2235 19 9.50002C19 7.77642 18.5754 6.18678 17.7262 4.73136ZM9.50015 1.38544C11.5452 1.38544 13.3306 2.06164 14.8562 3.41398L14.7016 3.63031C14.6397 3.71705 14.4851 3.88385 14.2378 4.13138C13.9904 4.37868 13.7203 4.61386 13.4276 4.83647C13.1347 5.05917 12.737 5.31271 12.2338 5.59723C11.7307 5.88176 11.1947 6.13136 10.6256 6.34574C9.67736 4.59731 8.66313 3.02222 7.58279 1.6204C8.23437 1.46373 8.87344 1.38544 9.50015 1.38544ZM3.14219 4.46521C3.93381 3.46757 4.89851 2.70053 6.03665 2.16458C7.05919 3.52524 8.06519 5.08395 9.05484 6.8404C6.5479 7.50012 4.04927 7.83001 1.55879 7.82988C1.82282 6.58473 2.35058 5.46305 3.14219 4.46521ZM1.92975 12.4257C1.56685 11.498 1.38544 10.5227 1.38544 9.50002C1.38544 9.38451 1.38969 9.2979 1.39784 9.24024C4.38323 9.24024 7.15828 8.85689 9.72293 8.0898C9.98688 8.60105 10.2054 9.05874 10.3786 9.46293C10.3452 9.4794 10.292 9.49786 10.2177 9.51852C10.1432 9.53915 10.0898 9.55344 10.0565 9.5618L9.59894 9.72259C9.28543 9.8381 8.87504 10.0361 8.36808 10.3163C7.86099 10.597 7.32292 10.9307 6.75387 11.3184C6.18482 11.7062 5.59723 12.2195 4.99119 12.8588C4.38505 13.4979 3.87584 14.1842 3.4635 14.9181C2.80377 14.1842 2.29257 13.3532 1.92975 12.4257ZM9.50015 17.6147C7.5704 17.6147 5.84688 16.9962 4.32946 15.7593L4.51503 15.8954C4.80363 15.2603 5.22827 14.65 5.78917 14.0646C6.34998 13.4792 6.89009 13.0069 7.40962 12.648C7.92914 12.2895 8.49399 11.9515 9.10432 11.6336C9.71453 11.3163 10.1308 11.1141 10.3536 11.0278C10.5763 10.9412 10.7537 10.873 10.8856 10.8234L10.9102 10.811H10.9351C11.743 12.9303 12.3206 14.9839 12.6668 16.9713C11.6442 17.4003 10.5888 17.6146 9.50015 17.6147ZM16.3286 13.8852C15.7183 14.8295 14.9554 15.611 14.0403 16.2293C13.7019 14.3326 13.1744 12.3986 12.4567 10.4278C14.0978 10.1719 15.7842 10.2917 17.516 10.7863C17.3345 11.9078 16.9386 12.941 16.3286 13.8852ZM17.4911 9.38872C17.4086 9.37234 17.3054 9.35362 17.1818 9.33313C17.0581 9.31264 16.9075 9.28777 16.7301 9.25891C16.5531 9.23006 16.3548 9.20332 16.1365 9.17854C15.9179 9.1538 15.685 9.13119 15.4374 9.11056C15.1901 9.08985 14.9261 9.07352 14.6459 9.06104C14.3652 9.04874 14.0808 9.0425 13.7921 9.0425C13.5038 9.0425 13.2004 9.05086 12.8831 9.06724C12.5657 9.08348 12.2586 9.11269 11.9618 9.15384C11.9369 9.11255 11.906 9.04449 11.8689 8.9496C11.8319 8.85485 11.8048 8.78258 11.7889 8.7331C11.632 8.38675 11.4505 7.995 11.2441 7.55805C11.8132 7.32699 12.3555 7.06114 12.8712 6.76007C13.3865 6.45899 13.7985 6.19115 14.1079 5.95615C14.4172 5.72089 14.71 5.47142 14.9862 5.2076C15.2625 4.94374 15.4417 4.76034 15.5244 4.65723C15.607 4.55394 15.6853 4.45299 15.7594 4.35416L15.7718 4.34168C16.9758 5.80958 17.5904 7.50004 17.6149 9.41341L17.4911 9.38872Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8568 0H5.14312C2.30716 0 0 2.30716 0 5.14312V13.857C0 16.6928 2.30716 19 5.14312 19H13.857C16.6928 19 19 16.6928 19 13.857V5.14312C19 2.30716 16.6928 0 13.8568 0V0ZM17.8861 13.857C17.8861 16.0786 16.0786 17.8861 13.8568 17.8861H5.14312C2.92134 17.8861 1.11386 16.0786 1.11386 13.857V5.14312C1.11386 2.92134 2.92134 1.11386 5.14312 1.11386H13.857C16.0786 1.11386 17.8861 2.92134 17.8861 5.14312V13.857Z" fill="black"/>
+                                <path d="M9.50027 4.30481C6.63561 4.30481 4.30511 6.6353 4.30511 9.49997C4.30511 12.3646 6.63561 14.6951 9.50027 14.6951C12.3649 14.6951 14.6954 12.3646 14.6954 9.49997C14.6954 6.6353 12.3649 4.30481 9.50027 4.30481ZM9.50027 13.5813C7.24994 13.5813 5.41897 11.7504 5.41897 9.49997C5.41897 7.24964 7.24994 5.41867 9.50027 5.41867C11.7507 5.41867 13.5816 7.24964 13.5816 9.49997C13.5816 11.7504 11.7507 13.5813 9.50027 13.5813Z" fill="black"/>
+                                <path d="M14.8194 2.45972C13.9729 2.45972 13.2843 3.14841 13.2843 3.99482C13.2843 4.84138 13.9729 5.53008 14.8194 5.53008C15.666 5.53008 16.3547 4.84138 16.3547 3.99482C16.3547 3.14827 15.666 2.45972 14.8194 2.45972ZM14.8194 4.41607C14.5872 4.41607 14.3982 4.22705 14.3982 3.99482C14.3982 3.76246 14.5872 3.57358 14.8194 3.57358C15.0518 3.57358 15.2408 3.76246 15.2408 3.99482C15.2408 4.22705 15.0518 4.41607 14.8194 4.41607Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-.s-showing {
+.seo-showing {
     position: relative;
     & .container {
         max-width: 1440px;
@@ -19,6 +19,9 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #505050;
+            & span {
+                color: #DC4139;
+            }
         }
         &-block {
             width: 100%;
@@ -86,7 +89,7 @@
             font-size: 20px;
             line-height: 29px;
             letter-spacing: 0.01em;
-            color: #9C9C9C;
+            color: #DC4139;
             margin-right: 40px;
         }
         &-after {
@@ -114,7 +117,7 @@
         justify-content: center;
         &-item {
             height: 220px;
-            width: 260px;
+            padding: 0 126px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -129,11 +132,13 @@
             font-family: Circe;
             font-style: normal;
             font-weight: normal;
-            font-size: 20px;
-            line-height: 29px;
+            font-size: 16px;
+            line-height: 24px;
             letter-spacing: 0.01em;
             color: #9C9C9C;
             margin-top: 18px;
+            width: 150px;
+            text-align: center;
         }
         &-text {
             font-family: Circe;
@@ -143,7 +148,8 @@
             line-height: 55px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #000000;
+            color: #DC4139;
+            text-align: center;
         }
     }
 }

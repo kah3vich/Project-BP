@@ -1,9 +1,12 @@
-.footer {
+.seo-footer {
     width: 100%;
     z-index: 1;
     position: relative;
+    & .container {
+        max-width: 1440px;
+    }
     &__container {
-        border-top: 1px solid #949494;
+        border-top: 1px solid #DC4139;
     }
     &__block {
         padding: 65px 90px 30px 90px;
