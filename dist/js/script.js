@@ -129,8 +129,20 @@ $(document).ready(function(){ // стандартный код для начал
     
     var swiper = new Swiper(".mySwiper", {
         loop: true,
-        slidesPerView: 6,
-        spaceBetween: 30,
+        breakpoints: { 
+          800: { 
+              slidesPerView: 6, 
+              spaceBetween: 30, 
+          },
+          400: {
+              slidesPerView: 3, 
+              spaceBetween: 30, 
+          },
+          0: {
+            slidesPerView: 2, 
+            spaceBetween: 30, 
+          }
+        },
     });
 
 
@@ -148,17 +160,17 @@ $(document).ready(function(){ // стандартный код для начал
         },
         speed: 700, // скорость прокрутки слайдов 
         breakpoints: { // адаптация слайдера 
-          1700: { // после размера экрана >1700 сработают указанный параметры 
+          1371: { // после размера экрана >1700 сработают указанный параметры 
               slidesPerView: 2, // количество слайдов, которых будет показываться 
               spaceBetween: 20, // отступ между слайдами 
           },
-          1200: {
-              slidesPerView: 2, // количество слайдов, которых будет показываться 
-              spaceBetween: 20, // отступ между слайдами 
+          1370: {
+              slidesPerView: 1, // количество слайдов, которых будет показываться 
+              spaceBetween: 0, // отступ между слайдами 
           },
           992: {
-              slidesPerView: 2, // количество слайдов, которых будет показываться 
-              spaceBetween: 20, // отступ между слайдами 
+              slidesPerView: 1, // количество слайдов, которых будет показываться 
+              spaceBetween: 0, // отступ между слайдами 
           }
         },
       });

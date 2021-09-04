@@ -68,6 +68,9 @@
             align-items: center;
             justify-content: center;
         }
+        &-media {
+            display: none;
+        }
         &-item {
             width: 100%;
             height: 436px;
@@ -140,6 +143,17 @@
             text-transform: uppercase;
             color: #DC4139;
             margin-top: 40px;
+            &-media {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 47px;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: #DC4139;
+                margin-top: 40px;
+            }
         }
         &-add {
             font-family: Circe;
@@ -149,6 +163,15 @@
             line-height: 29px;
             letter-spacing: 0.01em;
             color: #9C9C9C;
+            &-media {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 29px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
         }
     }
     &__info {

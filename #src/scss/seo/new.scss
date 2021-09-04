@@ -194,3 +194,28 @@
     font-size: 60px;
     color: black;
   }
+
+
+  .seo-new__text-controls-media {
+    display: none;
+  }
+  .seo-new__text-controls-media .swiper-controls-seo {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    width: 200px;
+    height: 30px;
+    margin-left: auto;
+    padding: 30px 0 10px 0;
+    z-index: 0;
+  }
+  .seo-new__text-controls-media .swiper-controls-seo .swiper-button-next::after {
+    content: "⟶";
+    font-size: 60px;
+    color: black;
+  }
+  .seo-new__text-controls-media .swiper-controls-seo .swiper-button-prev::after {
+    content: "⟵";
+    font-size: 60px;
+    color: black;
+  }
