@@ -28,6 +28,11 @@
             text-transform: uppercase;
             color: #FFFFFF;
         }
+        &-media {
+            display: none;
+            justify-content: flex-start;
+            align-items: center;
+        }
         &-name {
             margin-top: 85px;
             width: 154px;
@@ -64,6 +69,16 @@
             line-height: 24px;
             color: #FFFFFF;
             margin-top: 20px;
+            &-media {
+                width: 436px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FFFFFF;
+                margin-top: 20px;
+            }
         }
         &-image {
             width: 429px;

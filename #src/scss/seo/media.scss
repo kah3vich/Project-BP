@@ -21,6 +21,11 @@
         margin-top: 20px;
     }
 }
+@media (max-height: 670px) {
+    .seo-header__container {
+        top: 23%;
+    }
+}
 @media (max-height: 650px) {
     .s-header__search {
         padding-bottom: 10px;
@@ -29,6 +34,27 @@
         height: 150px;
     }
 }
+@media (max-height: 610px) {
+    .seo-header__info-btn-container {
+        margin-top: 45px;
+    }
+}
+@media (max-height: 560px) {
+    .seo-header__info-title {
+        margin-top: 33px;
+    }
+    .seo-header__info-text {
+        margin-top: 23px;
+    }
+}
+@media (max-height: 500px) {
+    .seo-header__container {
+        top: 18%;
+    }
+}
+
+
+
 
 
 @media (max-width: 1505px) {
@@ -41,10 +67,6 @@
         display: none;
     }
 }
-
-
-
-
 @media (max-width: 1370px) {
     .seo-new__slide-container {
         width: 520px;
@@ -672,6 +694,9 @@
             padding: 0 28px;
         }
     }
+    .seo-price__text-title {
+        text-align: center;
+    }
 }
 @media (max-width: 600px) {
     .seo-showing__text-title {
@@ -719,6 +744,11 @@
     }
     .seo-audit__list-text {
         height: 100%;
+    }
+}
+@media (max-width: 470px) {
+    .seo-showing__text-after {
+        margin-left: 25px;
     }
 }
 @media (max-width: 450px) {
@@ -816,5 +846,44 @@
     }
     .seo-footer__add-sections a {
         margin: 0 5px 0 0;
+    }
+    .seo-showing__list {
+        padding: 0 45px;
+    }
+    .seo-audit__list-block {
+        margin-left: 35px;
+    }
+    .seo-about__block-info {
+        height: 110px;
+    }
+    .seo-price__info-text::before {
+        content: "dream team";
+        position: absolute;
+        top: 8px;
+        left: 218px;
+        width: 50%;
+        font-family: Circe;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: .01em;
+        color: #9c9c9c;
+    }
+    .seo-new__slide-text {
+        margin-top: 20px;
+        width: 260px;
+        height: 120px;
+        font-family: Circe;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 33px;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .seo-new__slide-container {
+        width: 310px;
     }
 }

@@ -140,6 +140,23 @@
             text-transform: uppercase;
             color: #DC4139;
             margin-top: 40px;
+            &-media {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 47px;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: #DC4139;
+                margin-top: 40px;
+            }
+        }
+        &-media {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
         }
         &-add {
             font-family: Circe;
@@ -149,6 +166,15 @@
             line-height: 29px;
             letter-spacing: 0.01em;
             color: #9C9C9C;
+            &-media {
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 29px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
         }
     }
 

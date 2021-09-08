@@ -74,6 +74,26 @@
             line-height: 25px;
             color: #535353;
         }
+        &-img {
+            width: 516px;
+            height: 539px;
+            position: relative;
+            & img {
+                width: 516px;
+                height: 539px;
+                object-fit: cover;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 34px;
+                left: -24px;
+                width: 499px;
+                height: 527px;
+                border: 1px solid #DC4139;
+                z-index: -1;
+            }
+        }
         &-people {
             display: flex;
             align-items: center;
