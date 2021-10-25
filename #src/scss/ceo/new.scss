@@ -171,6 +171,7 @@
     display: flex;
     align-items: center;
 }
+
   .ceo-new__text-controls {
       position: relative;
   }
@@ -187,7 +188,7 @@
   .ceo-new__text-controls .swiper-controls-ceo .swiper-button-next::after {
     content: "⟶";
     font-size: 60px;
-    color: black;
+    color: #DC4139;
   }
   .ceo-new__text-controls .swiper-controls-ceo .swiper-button-prev::after {
     content: "⟵";

@@ -193,9 +193,10 @@ $(document).ready(function(){ // стандартный код для начал
 
 
     var swiper = new Swiper('.newSeo', { // объявляем слайдер 
-        in: {
-            effect: "fadeInDown",
-          },
+      flipEffect: {
+        rotate: 30,
+        slideShadows: false,
+      },
         pagination: { // счетчик сладов "1/6"
           el: '.swiper-pagination',
           type: 'fraction',

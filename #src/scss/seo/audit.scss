@@ -20,9 +20,9 @@
             height: 150px;
             width: 520px;
             &:nth-child(1) {
-                border-top: 1px solid #949494;
+                border-top: 1px solid #DC4139;
             }
-            border-bottom: 1px solid #949494;
+            border-bottom: 1px solid #DC4139;
         }
         &-block {
             display: flex;
@@ -45,8 +45,8 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: 10px;
-                left: 10px;
+                top: 11px;
+                left: 11px;
                 width: 69px;
                 height: 69px;
                 background: #DC4139;

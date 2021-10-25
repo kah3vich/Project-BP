@@ -18,6 +18,36 @@
             line-height: 29px;
             letter-spacing: 0.01em;
             color: #9C9C9C;
+            position: relative;
+            &::after {
+                content: "/  00-3  /";
+                position: absolute;
+                top: -65px;
+                left: 0;
+                white-space: pre;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #9C9C9C;
+            }
+            &::before {
+                content: "digital агентство";
+                position: absolute;
+                top: 5px;
+                right: -170px;
+                font-family: Circe;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                width: 100px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                color: #9C9C9C;
+            }
         }
         &-title {
             margin-top: 54px;

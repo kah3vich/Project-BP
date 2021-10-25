@@ -525,7 +525,6 @@ button.header__info-btn:hover .header__info-btn-right.btn-right-after:before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 120px 90px 0 90px;
-  border-bottom: 1px solid #949494;
 }
 
 .info__text-btn-container {
@@ -669,7 +668,7 @@ button.header__info-btn:hover .header__info-btn-right.btn-right-after:before {
 
 .info__stats {
   width: 100%;
-  margin: 151px 0px 152px 0px;
+  margin: 151px 0px 0 0px;
 }
 
 .info__stats-block {
@@ -903,7 +902,6 @@ button.info__text-btn:hover .info__text-btn-right.btn-right-after:before {
 .infoImage .swiper-slide {
   font-size: 18px;
   background: #DC4139;
-  border: 1px solid #fff;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -948,6 +946,12 @@ button.info__text-btn:hover .info__text-btn-right.btn-right-after:before {
   color: black;
 }
 
+.info__stats-img-controls .swiper-controls .swiper-button-next::after {
+  content: "⟶";
+  font-size: 60px;
+  color: #DC4139;
+}
+
 .case {
   width: 100%;
   z-index: 1;
@@ -961,7 +965,7 @@ button.info__text-btn:hover .info__text-btn-right.btn-right-after:before {
 }
 
 .case__text {
-  padding: 93px 0 0px 0;
+  padding: 25px 0 0 0;
 }
 
 .case__text-number {
@@ -1205,7 +1209,7 @@ button.info__text-btn:hover .info__text-btn-right.btn-right-after:before {
 }
 
 .skills__text-number {
-  margin-top: 119px;
+  margin-top: 0;
   height: 18px;
   width: 55px;
   display: -webkit-box;
@@ -8304,6 +8308,7 @@ button.skills__info-btn:hover .skills__info-btn-right.btn-right-after:before {
 }
 
 .dt-mobile__block-image {
+  margin: 60px 0 0 0;
   width: 220px;
   height: 408px;
 }
@@ -9208,11 +9213,11 @@ button.seo-header__info-btn:hover .seo-header__info-btn-right.btn-right-after:be
           justify-content: space-between;
   height: 150px;
   width: 520px;
-  border-bottom: 1px solid #949494;
+  border-bottom: 1px solid #DC4139;
 }
 
 .seo-audit__list-item:nth-child(1) {
-  border-top: 1px solid #949494;
+  border-top: 1px solid #DC4139;
 }
 
 .seo-audit__list-block {
@@ -9251,8 +9256,8 @@ button.seo-header__info-btn:hover .seo-header__info-btn-right.btn-right-after:be
 .seo-audit__list-number::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 11px;
+  left: 11px;
   width: 69px;
   height: 69px;
   background: #DC4139;
@@ -9564,6 +9569,38 @@ button.seo-audit__text-btn:hover .seo-audit__text-btn-right.btn-right-after:befo
   font-weight: normal;
   font-size: 20px;
   line-height: 29px;
+  letter-spacing: 0.01em;
+  color: #9C9C9C;
+  position: relative;
+}
+
+.seo-about__block-add::after {
+  content: "/  00-3  /";
+  position: absolute;
+  top: -65px;
+  left: 0;
+  white-space: pre;
+  font-family: Circe;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #9C9C9C;
+}
+
+.seo-about__block-add::before {
+  content: "digital агентство";
+  position: absolute;
+  top: 5px;
+  right: -170px;
+  font-family: Circe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  width: 100px;
+  line-height: 18px;
   letter-spacing: 0.01em;
   color: #9C9C9C;
 }
@@ -10557,7 +10594,7 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
 
 .seo-price {
   position: relative;
-  padding: 0 0 140px 0;
+  padding: 0 0 63px 0;
 }
 
 .seo-price .container {
@@ -11235,6 +11272,10 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
   color: #FFFFFF;
 }
 
+.newSeo .swiper-button-next::after {
+  color: #DC4139;
+}
+
 .newSeo .swiper-container {
   width: 100%;
   height: 130%;
@@ -11271,9 +11312,9 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
 .newSeo .swiper-slide-next {
   width: 378px;
   height: 279px;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
   margin: auto;
   background-color: transparent;
   border: 1px solid #949494;
@@ -11297,10 +11338,19 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
 .newSeo .swiper-slide-active {
   width: 378px;
   height: 398px;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
   background-color: #000;
+}
+
+.newSeo .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .newSeo .wrapper {
@@ -11330,7 +11380,7 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
 .seo-new__text-controls .swiper-controls-seo .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .seo-new__text-controls .swiper-controls-seo .swiper-button-prev::after {
@@ -11357,7 +11407,7 @@ button.seo-about__block-btn:hover .seo-about__block-btn-right.btn-right-after:be
 .seo-new__text-controls-media .swiper-controls-seo .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .seo-new__text-controls-media .swiper-controls-seo .swiper-button-prev::after {
@@ -13618,7 +13668,7 @@ button.ceo-info__block-btn:hover .ceo-info__block-btn-right.btn-right-after:befo
 .ceo-new__text-controls .swiper-controls-ceo .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .ceo-new__text-controls .swiper-controls-ceo .swiper-button-prev::after {
@@ -17128,7 +17178,7 @@ button.opt-header__info-btn:hover .opt-header__info-btn-right.btn-right-after:be
 .opt-new__text-controls .swiper-controls-opt .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .opt-new__text-controls .swiper-controls-opt .swiper-button-prev::after {
@@ -18991,7 +19041,6 @@ input[name=tabs] {
 
 .rec-header__info-text {
   margin-top: 43px;
-  width: 250px;
   height: 44px;
   font-family: Circe;
   font-style: normal;
@@ -20512,6 +20561,7 @@ button.rec-skills__info-btn:hover .rec-skills__info-btn-right.btn-right-after:be
   -webkit-transform: scale(1.1, 1.15);
       -ms-transform: scale(1.1, 1.15);
           transform: scale(1.1, 1.15);
+  border: none;
 }
 
 .rec-price__block-item:nth-child(2) .rec-price__block-key {
@@ -21040,7 +21090,7 @@ button.rec-skills__info-btn:hover .rec-skills__info-btn-right.btn-right-after:be
 .rec-new__text-controls .swiper-controls-rec .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .rec-new__text-controls .swiper-controls-rec .swiper-button-prev::after {
@@ -23258,7 +23308,7 @@ button.mail-info__block-btn:hover .mail-info__block-btn-right.btn-right-after:be
 .mail-new__text-controls .swiper-controls-mail .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .mail-new__text-controls .swiper-controls-mail .swiper-button-prev::after {
@@ -25743,7 +25793,7 @@ button.hel-result__block-btn:hover .hel-result__block-btn-right.btn-right-after:
 .hel-new__text-controls .swiper-controls-hel .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .hel-new__text-controls .swiper-controls-hel .swiper-button-prev::after {
@@ -27411,7 +27461,7 @@ button.bit-header__info-btn:hover .bit-header__info-btn-right.btn-right-after:be
 .bit-info__stats-img-controls .swiper-controls .swiper-button-prev::after {
   content: "⟵";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .bit-ready {
@@ -27835,7 +27885,7 @@ button.bit-ready__block-btn:hover .bit-ready__block-btn-right.btn-right-after:be
 .bit-new__text-controls .swiper-controls-bit .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .bit-new__text-controls .swiper-controls-bit .swiper-button-prev::after {
@@ -29978,7 +30028,7 @@ button.rea-header__info-btn:hover .rea-header__info-btn-right.btn-right-after:be
 .rea-info__stats-img-controls .swiper-controls .swiper-button-prev::after {
   content: "⟵";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .rea-new {
@@ -30220,7 +30270,7 @@ button.rea-header__info-btn:hover .rea-header__info-btn-right.btn-right-after:be
 .rea-new__text-controls .swiper-controls-rea .swiper-button-next::after {
   content: "⟶";
   font-size: 60px;
-  color: black;
+  color: #DC4139;
 }
 
 .rea-new__text-controls .swiper-controls-rea .swiper-button-prev::after {
@@ -33809,6 +33859,10 @@ button {
 @media (max-width: 1050px) {
   .skills__tabs {
     display: none;
+  }
+
+  .info__stats {
+    margin: 151px 0 50px 0;
   }
 
   .header__info-btn-container::after {

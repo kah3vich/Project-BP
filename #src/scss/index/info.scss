@@ -10,7 +10,6 @@
         display: flex;
         justify-content: space-between;
         padding: 120px 90px 0 90px;
-        border-bottom: 1px solid $gray-94;
     }
     &__text {
         &-btn {
@@ -128,7 +127,7 @@
     }
     &__stats {
         width: 100%;
-        margin: 151px 0px 152px 0px;
+        margin: 151px 0px 0 0px;
         &-block {
             display: flex;
             flex-direction: column;
@@ -305,7 +304,6 @@ button.info__text-btn {
   .infoImage .swiper-slide {
     font-size: 18px;
     background: #DC4139;
-    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -345,3 +343,8 @@ button.info__text-btn {
     font-size: 60px;
     color: black;
   }
+  .info__stats-img-controls .swiper-controls .swiper-button-next::after {
+    content: "⟶";
+    font-size: 60px;
+    color: #DC4139;
+}
