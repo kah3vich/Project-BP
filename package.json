@@ -1,13 +1,21 @@
 {
-  "name": "fls-gulp",
+  "name": "project-bp",
+  "type": "module",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Website portfolio company BP",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "otf2ttf": "gulp otf2ttf",
+    "svg": "gulp svg_sprite"
   },
-  "author": "kah3vich_",
-  "license": "ISC",
+  "author": {
+    "url": "https://github.com/kah3vich",
+    "name": "kah3vich",
+    "email": "kah3vich@proton.me"
+  },
+  "license": "Apache-2.0",
   "devDependencies": {
     "browser-sync": "^2.27.5",
     "del": "^6.0.0",
